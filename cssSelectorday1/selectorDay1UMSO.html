@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UMSO</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            color: white;
+            background-color: black;
+        }
+        .c1 {
+            max-width: 1300px;
+            margin: auto;
+        }
+        nav {
+            display: flex;
+        }
+        nav>div>img {
+            width: 100%;
+            margin: 15px;
+        }
+        nav>div:nth-of-type(2) {
+            margin-left: 600px;
+            margin-top: 15px;
+            font-size: 18px;
+        } 
+        nav>div:nth-of-type(2)>span{
+            margin-left: 35px;
+        }
+        nav>div:nth-of-type(2)>span:hover{
+            text-decoration: underline;
+        }
+        nav>div:nth-of-type(2)>button {
+            padding: 10px;
+            margin-left: 50px;
+            border: 1px solid white;
+            border-radius: 10px;
+            font-weight: 600;
+        }
+        nav>div:nth-of-type(2)>button:hover {
+            border-color:  rgb(83,10,231);
+        }
+        main>div>h1 {
+            font-size:75px;
+            text-align: center;
+            padding: 5px;
+        }
+        main>div>h1:nth-of-type(1) {
+          margin-top: 105px;
+        }    
+        main>div>h1:nth-of-type(2) {
+        background: linear-gradient(to right, rgb(69,13,238), rgb(131,1,211));
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+    }
+        main>div>p{
+            color: rgb(85,92,93);
+            font-size: 25px;
+            margin-left: 500px;
+            padding: 10px;
+        }
+        main>div>div:nth-of-type(1) {
+            border: 1px solid;
+            width: 550px;
+            margin-left: 480px;
+            margin-top: 50px;
+            padding: 15px;
+            border-radius: 15px;
+            border-color:  rgb(146,122,232);
+            box-shadow: 1px 1px 5px 3px rgb(83,10,231) ;
+        }
+        main>div>div:nth-of-type(1)>input {
+            width: 400px;
+            border: none;
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+        main>div>div:nth-of-type(1)>label {
+            border: 1px solid rgb(146,122,232);
+            padding: 10px 17px;
+            border-radius: 10px;
+            background-color: rgb(69,13,238);
+        }
+        main>div>div:nth-of-type(1)>label>i:hover {
+           background-color:rgb(64, 0, 255) ;
+        }
+        main>div>div:nth-of-type(2)  {
+            width: 500px;
+            margin-left: 500px;
+            margin-top: 50px;
+            padding: 10px;
+        }
+        main>div>div:nth-of-type(2)>span:nth-of-type(1) {
+           margin-left: 5px;
+           color:rgb(85,92,93) ;
+        }
+        main>div>div:nth-of-type(2)>span:nth-of-type(2) {
+           margin-left: 5px;
+           color: rgb(0,182,122);
+        }
+        main>div>div:nth-of-type(2)>span:nth-of-type(3) {
+           margin-left: 5px;
+           color:rgb(85,92,93) ;
+        }
+        main>div>div:nth-of-type(2)>span:nth-of-type(4) {
+            margin-left: 5px;
+            border: 1px solid white;
+            padding: 5px 8px;
+            color: black;
+            background-color: white;
+            border-radius: 10px;
+        }
+        main>div>div:nth-of-type(2)>span:nth-of-type(4)>span {
+            background-color: white;
+            color:rgb(0,182,122) ;
+        }
+        main>div>div:nth-of-type(3) {
+            display: flex;
+            width: 200px;
+            border: 1px solid white;
+            margin-left: 650px;
+            border-radius: 10px;
+            padding: 10px;
+            background-color: white;
+            margin-top: 30px;
+        }
+        main>div>div:nth-of-type(3)>div:nth-of-type(1) {
+            background-color: white;
+            color: black;
+            width: 50px;
+        }
+        main>div>div:nth-of-type(3)>div:nth-of-type(2) {
+            background-color: white; 
+        }
+        </style>
+        <script src="https://kit.fontawesome.com/91a6d2fe0f.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <nav class="c1">
+            <div style="width: 100px;"><img src="https://www.umso.com/lib_LUGoPiqXXlDptSWA/csi5g5qmp4uscbth.png" alt="image"></div>
+            <div>
+                <span>Pricing</span>
+                <span>Features</span>
+                <span>Showcase</span>
+                <button>Login</button>
+                <button>Sign Up &rightarrow;</button>
+            </div>
+        </nav>
+    </header>    
+        <main>
+            <div>
+                <h1>Get your</h1>
+                <h1>AI Generated Website</h1>
+                <h1>  In Seconds</h1>
+                <p> Give it a try right below, without having to sign up!</p>
+                <div>
+                    <input type="text" name="generate" id="generate" placeholder="Dating App for outdoorsy people" >
+                    <label for="generate">Generate <i class="fa-solid fa-wand-sparkles" style="background-color: blue;"></i></label>
+                </div>
+                <div>
+                    <span>Excellent</span>
+                    <span> &starf; &starf; &starf; &starf; &star; </span>
+                    <span>4.8 out of 5 based on 85 reviews</span>
+                    <span><span>&starf;</span>Trustpilot</span>
+                </div>
+                <div>
+                    <div>Made with</div>
+                    <div><img src="https://www.umso.com/lib_LUGoPiqXXlDptSWA/csi5g5qmp4uscbth.png" alt="image" style="width: 100%; background-color: rgb(142, 141, 141); color: black;"></div>
+                </div>
+            </div>
+            
+        </main>
+   
+</body>
+</html>
