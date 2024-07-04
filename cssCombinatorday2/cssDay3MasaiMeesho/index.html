@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meesho</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      .container {
+        margin: auto;
+        max-width: 1300px;
+        font-weight: 600;
+      }
+      header {
+        /* display: flex; */
+        background: #fff;
+        color: rgb(93, 81, 81);
+        padding: 1rem;
+      }
+      header .logo {
+        /* display: inline; */
+        width: 20%;
+        margin-right: 5rem;
+      }
+      header .container {
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+      }
+      header .container span {
+        margin-left: 1.4rem;
+      }
+      header nav {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        height: auto;
+        padding-top: 15px;
+        padding-bottom: 15px;
+      }
+      header nav span:hover {
+        color: purple;
+        font-weight: bold;
+      }
+    
+      .page2 {
+        display: flex;
+
+      }
+      .page2>div>aside {
+        background-color: rgb(245, 245, 245);
+        width: 250px;
+      }
+      /* .filtergroup>ul>li {
+        list-style-type: none;
+      } */
+      .box {
+        display: grid;
+        grid-template-columns: repeat(4 , 1fr );
+        gap: 20px;
+        padding: 10px;
+      }
+      .cart {
+        border: 2px solid rgb(0, 0, 0);
+        border-radius: 10px;
+        display: grid;
+        gap: 10px;
+        padding: 5px;
+      }
+      .cartimage {
+         width: 230px;
+         padding: 15px;
+         border-radius: 10px;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div>
+          <img
+            src="https://www.meesho.com/assets/svgicons/meeshoLogo.svg"
+            alt="logo"
+            class="logo"
+          />
+          <span style="border: 1px solid; padding: 10px;" >
+            <span class="material-symbols-outlined" style=" margin-left: 0px;"> search </span
+            ><input
+              type="text"
+              placeholder="Try Saree, Kurti or Search by Product Code" 
+              style="border: none"
+            />
+          </span>
+          <span
+            ><span class="material-symbols-outlined"> install_mobile </span
+            >Download App</span
+          ><span>Become a Supplier</span><span>Newsroom</span
+          ><span>
+            <span class="material-symbols-outlined"> person </span>Profile</span
+          ><span
+            ><span class="material-symbols-outlined"> shopping_cart </span
+            >Cart</span
+          >
+        </div>
+      </div>
+      <hr style="margin-top: 20px;">
+      <div class="container">
+        <nav>
+          <span>Women Ethnic</span><span>Women Western</span><span>Men</span
+          ><span>Kids</span><span>Home & Kitchen</span
+          ><span>Beauty & Health</span><span>Jewellery & Accessories</span
+          ><span>Bags & Footwear</span> <span>Electronics</span>
+        </nav>
+      </div>
+      <hr />
+    </header>
+    <main>
+      <div class="container page2">
+        <div>
+            <aside>
+                <div style="font-size: 25px; padding: 5px; margin: 5px;">Products For You</div>
+                <hr>
+                <span class="sort" style="padding: 13px; margin: 15px;">
+                  <label for="sort"> Sort by :
+                    <select name="sort" id="sort">
+                      <option value="relevance" style="padding: 25px; margin: 25px;">Relevance</option>
+                      <option value="price-low-high">Price: Low to High</option>
+                      <option value="price-high-low">Price: High to Low</option>
+                      <option value="newest">Newest</option>
+                    </select>
+                  </label>
+                </span>
+                <hr>
+                <div>
+                    <div style="margin-left: 30px; padding: 10px;">
+                        <h3>Filters</h3>
+                        <h6>1000+ products</h6>
+                    </div>
+                  <hr>
+                  <div class="filterGroup"   style="margin-left: 10px; padding: 10px;">
+                       <h3 style="margin-left: 10px; padding: 10px;">Category</h3>
+                    <span style="padding: 7px; margin: 5px; border: 1px solid rgb(244, 232, 244);">
+                      <span class="material-symbols-outlined"> search </span
+                      ><input type="text" placeholder="Search" style="border: none ;" />
+                    </span>
+                    <ul style="list-style-type: none;">
+                      <li ><input type="checkbox" style="padding: 15px; margin: 15px;" />Women T-shirts</li>
+                      <li><input type="checkbox" style="padding: 15px; margin: 15px;" />Women Tops And Tunics</li>
+                      <li><input type="checkbox" style="padding: 15px; margin: 15px;" />Bedsheets</li>
+                      <li><input type="checkbox" style="padding: 15px; margin: 15px;"/>Bike Covers</li>
+                      <li><input type="checkbox" style="padding: 15px; margin: 15px;" />Blouses</li>
+                      <li><input type="checkbox" style="padding: 15px; margin: 15px;"/>Cups & Mugs</li>
+                      <li><input type="checkbox" style="padding: 15px; margin: 15px;" />Earrings & Studs</li>
+                      <li style="color: blue;">
+                        +6 more
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </aside>
+        </div>
+       
+
+
+        <div class="box">
+          <div class="cart">
+           <div class="cartimage">
+            <img
+            src="https://images.meesho.com/images/products/6067041/jakvg_400.webp"
+            alt="image" style=" width: 100%;">
+          </div>
+            
+            <h3>Useful Extension Boards</h3>
+            <p style="font-size: 30px;">$156</p>
+            <p>Free Delivery</p>
+            <div style="border: 2px solid green; border-radius:20%; background-color: green; color: white; width:max-content; padding: 5px;">3.7</div>
+          </div>
+          <div class="cart">
+            <div class="cartimage">
+                <img
+                src="https://images.meesho.com/images/products/6067041/jakvg_400.webp"
+                alt="image" style=" width: 100%;">
+              </div>
+            <h3>Useful Extension Boards</h3>
+            <p style="font-size: 30px;">$156</p>
+            <p>Free Delivery</p>
+            <div style="border: 2px solid green; border-radius:20%; background-color: green; color: white; width:max-content; padding: 5px;">3.7</div>
+          </div>
+          <div class="cart">
+            <div class="cartimage"> 
+                <img
+                src="https://images.meesho.com/images/products/6067041/jakvg_400.webp"
+                alt="image" style=" width: 100%;">
+              </div>
+            <h3>Useful Extension Boards</h3>
+            <p style="font-size: 30px;">$156</p>
+            <p>Free Delivery</p>
+            <div style="border: 2px solid green; border-radius:20%; background-color: green; color: white; width:max-content; padding: 5px;">3.7</div>
+          </div>
+          <div class="cart">
+            <div class="cartimage">
+                <img
+                src="https://images.meesho.com/images/products/6067041/jakvg_400.webp"
+                alt="image" style=" width: 100%;">
+              </div>
+            <h3>Useful Extension Boards</h3>
+            <p style="font-size: 30px;">$156</p>
+            <p>Free Delivery</p>
+            <div style="border: 2px solid green; border-radius:20%; background-color: green; color: white; width:max-content; padding: 5px;">3.7</div>
+          </div>
+          <div class="cart">
+            <div class="cartimage">
+                <img
+                src="https://images.meesho.com/images/products/6067041/jakvg_400.webp"
+                alt="image" style=" width: 100%;">
+              </div>
+            <h3>Useful Extension Boards</h3>
+            <p style="font-size: 30px;">$156</p>
+            <p>Free Delivery</p>
+            <div style="border: 2px solid green; border-radius:20%; background-color: green; color: white; width:max-content; padding: 5px;">3.7</div>
+          </div>
+          <div class="cart">
+            <div class="cartimage">
+                <img
+                src="https://images.meesho.com/images/products/6067041/jakvg_400.webp"
+                alt="image" style=" width: 100%;">
+              </div>
+            <h3>Useful Extension Boards</h3>
+            <p style="font-size: 30px;">$156</p>
+            <p>Free Delivery</p>
+            <div style="border: 2px solid green; border-radius:20%; background-color: green; color: white; width:max-content; padding: 5px;">3.7</div>
+          </div>
+          <div class="cart">
+            <div class="cartimage">
+                <img
+                src="https://images.meesho.com/images/products/6067041/jakvg_400.webp"
+                alt="image" style=" width: 100%;">
+              </div>
+            <h3>Useful Extension Boards</h3>
+            <p style="font-size: 30px;">$156</p>
+            <p>Free Delivery</p>
+            <div style="border: 2px solid green; border-radius:20%; background-color: green; color: white; width:max-content; padding: 5px;">3.7</div>
+          </div>
+          <div class="cart">
+            <div class="cartimage">
+                <img
+                src="https://images.meesho.com/images/products/6067041/jakvg_400.webp"
+                alt="image" style=" width: 100%;">
+              </div>
+            <h3>Useful Extension Boards</h3>
+            <p style="font-size: 30px;">$156</p>
+            <p>Free Delivery</p>
+            <div style="border: 2px solid green; border-radius:20%; background-color: green; color: white; width:max-content; padding: 5px;">3.7</div>
+          </div>
+        </div>
+    </div>
+    </main>
+  </body>
+</html>

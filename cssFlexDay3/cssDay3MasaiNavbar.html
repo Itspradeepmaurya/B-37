@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Masai NavBar</title>
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+            
+        }
+        header {
+            max-width: 1300px;
+            margin: auto; 
+        }
+      header > nav {
+        border-bottom: 1px solid lightgrey;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1em;
+      }
+      header > nav > div > img {
+        padding-top: 10px;
+      }
+      header > nav > div:nth-child(2) {
+     
+        display: flex;
+        gap: 2em;
+        width:60em;
+        flex-wrap: wrap;
+        
+      }
+
+      header > nav > div:nth-child(2)>p {
+        
+        padding: 5px 13px;
+        border-radius: 10px;
+      }
+      header > nav > div:nth-child(2)>p:last-child {
+        color: blue;
+        background-color: rgb(197, 204, 224);
+      }
+      header > nav > div:nth-child(2)>p:last-child:hover {
+        background-color: rgb(43, 162, 236);
+      }
+      header > nav > div:nth-child(2)>p:hover {
+        color: red;
+        background-color: rgb(251, 223, 223);
+      }
+      header>nav>div>button {
+       color: red;
+       border: 1px solid red;
+       /* margin-top: 1em; */
+       font-size: large;
+       padding:.7em 2em;
+       margin-top: .5em;
+       border-radius: 10px;
+      }
+      header>nav>div>button:hover {
+        background-color:rgb(251, 223, 223);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div>
+          <img
+            src="https://masai-website-images.s3.ap-south-1.amazonaws.com/logo.png"
+            alt=""
+          />
+        </div>
+        <div>
+          <p>COURSES</p>
+          <p>FEES & ISA</p>
+          <p>ABOUT US</p>
+          <p>HIRE FROM US</p>
+          <p>FAQ</p>
+          <p>EVENTS</p>
+          <p>REFER & EARN </p>
+        </div>
+        <div><button type="login">SIGN UP</button></div>
+      </nav>
+    </header>
+  </body>
+</html>

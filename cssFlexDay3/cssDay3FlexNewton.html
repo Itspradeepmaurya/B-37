@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        main {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            max-width: 1300px;
+            margin: auto;
+        }
+        main>div.heading:nth-of-type(1) {
+            display: flex;
+        }
+        main>div.heading>div:nth-of-type(2){
+           margin-left: 700px;
+        }
+        main>div.heading>div:nth-of-type(2)>i {
+            border: 2px solid;
+            background-color: #dfdfdf;
+            border-radius: 50%;
+            padding: 5px;
+            margin-top: 65px;
+        }
+        .box {
+            display: flex;
+           justify-content: space-between;
+        }
+        .card {
+            display: flex;
+            flex-direction: column;
+            width: 380px;
+            padding: 10px;
+        }
+        .card>iframe {
+            border-radius: 25px;
+        }
+        .card>p {
+            padding: 20px;
+            color: grey;
+        }
+    </style>
+    <script src="https://kit.fontawesome.com/91a6d2fe0f.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <main>
+        <div class="heading">
+            <div>
+                <h1>Winning with Newton School</h1>
+                <p>Watch what our learners have to say</p>
+            </div>
+            <div> <i class="fa-solid fa-arrow-left" ></i> <i class="fa-solid fa-arrow-right"></i> </div>
+        </div>
+        <div class="box">
+            <div class="card">
+                    <iframe width="380" height="215" src="https://www.youtube.com/embed/yHzFVW_EHy4?si=nUnaxvI2N09fjK0E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <p>Prepare to be inspired as learners recount their
+                        journey to landing dream jobs at Indigo, powered
+                        by Newton School's innovative approach. Watch
+                        here!</p>
+                </div>
+        
+             <div class="card">
+               
+                    <iframe width="380" height="215" src="https://www.youtube.com/embed/CCiidGph2k8?si=Z7_aKWRXyAqVgCA7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <p>Aman was in for a surprise on his birthday. He
+                        landed his dream job on this special day, and his
+                        journey was nothing short of extraordinary. Watch
+                        here!</p>
+                
+            </div> 
+        
+             <div class="card">
+                    <iframe width="380" height="215" src="https://www.youtube.com/embed/fu8xr3ycJmE?si=d_BVPFXFp8n7Ia3R" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <p>Explore Nikhil Choudhary's leap from IIT Guwahati
+                        research to Data Science, driven by its market
+                        potential. Watch here!</p>
+                
+            </div> 
+        </div>
+    </main>
+</body>
+</html>
