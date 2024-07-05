@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Keyboard</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      main {
+        background-color: rgb(75, 177, 212);
+        width: 100vw;
+        height: 100vh;
+        padding: 10em;
+      }
+      main > div {
+        background-color: rgb(36, 44, 42);
+        border: 2px solid;
+        border-radius: 30px;
+        width: 80vw;
+        height: 50vh;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        flex-wrap: wrap;
+        padding: 3em;
+        gap: 1em;
+      }
+
+      main > div > div {
+        border: 2px solid;
+        color: rgb(75, 177, 212);
+        background-color: rgb(46, 53, 56);
+        border-radius: 10px;
+        border: none;
+        display: grid;
+        place-items: center;
+      }
+      main > div > div:nth-child(35) {
+        grid-area: 3/11/4/13;
+      }
+      main > div > div:nth-child(46) {
+        grid-area: 4/11/5/13;
+      }
+      main > div > div:nth-child(51) {
+        grid-area: 5/5/6/9;
+      }
+      .con2 {
+        max-width: 1300px;
+        margin: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <main >
+      <div class="con2">
+        <div>~</div>
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>0</div>
+        <div>Delete</div>
+        <div>tab</div>
+        <div>Q</div>
+        <div>W</div>
+        <div>E</div>
+        <div>R</div>
+        <div>T</div>
+        <div>Y</div>
+        <div>U</div>
+        <div>I</div>
+        <div>O</div>
+        <div>P</div>
+        <div>\</div>
+        <div>caps</div>
+        <div>A</div>
+        <div>S</div>
+        <div>D</div>
+        <div>F</div>
+        <div>G</div>
+        <div>H</div>
+        <div>J</div>
+        <div>K</div>
+        <div>L</div>
+        <div>Enter</div>
+        <div>shift</div>
+        <div>Z</div>
+        <div>X</div>
+        <div>C</div>
+        <div>V</div>
+        <div>B</div>
+        <div>N</div>
+        <div>M</div>
+        <div><</div>
+        <div>></div>
+        <div>shift</div>
+        <div></div>
+        <div>control</div>
+        <div>option</div>
+        <div>alt</div>
+        <div>space</div>
+        <div>alt</div>
+        <div>option</div>
+        <div>&leftarrow;</div>
+        <div>&rightarrow;</div>
+      </div>
+    </main>
+  </body>
+</html>
