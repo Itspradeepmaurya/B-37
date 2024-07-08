@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web214_b_37_C3</title>
+    <script
+      src="https://kit.fontawesome.com/91a6d2fe0f.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      .con2 {
+        max-width: 1300px;
+        margin: auto;
+      }
+      header > nav:nth-of-type(1) {
+        display: flex;
+        justify-content: space-between;
+        font-size: 25px;
+        /* border-bottom: 1px solid grey; */
+        padding: 10px;
+      }
+      hr {
+        background-color: 1px solid grey;
+      }
+      header > nav:nth-of-type(1) button {
+        padding: 10px 15px;
+        background-color: white;
+        /* border: none; */
+        border-left-color: grey;
+        border-right-color: grey;
+      }
+      header > nav:nth-of-type(1) button:hover {
+        background-color: bisque;
+      }
+      .nav2 {
+        display: flex;
+        gap: 60px;
+        justify-content: center;
+        padding: 15px;
+      }
+      footer {
+        background-color: black;
+        color: grey;
+      }
+      .foot1 {
+        display: flex;
+        justify-content: space-between;
+        padding: 35px;
+      }
+      .foot1 > div:nth-of-type(1) {
+        display: flex;
+        justify-content: space-around;
+      }
+      .foot1 > div:nth-of-type(1) > div {
+        padding-right: 180px;
+      }
+      .foot1 > div:nth-of-type(1) > div > h4 {
+        color: white;
+        padding: 5px;
+      }
+      .foot1 > div:nth-of-type(1) > div > p {
+        padding: 5px;
+      }
+      .foot1 > div:nth-of-type(2) {
+        display: grid;
+        align-items: flex-end;
+        gap: 10px;
+      }
+      .foot1 > div:nth-of-type(2) > div > span {
+        padding-inline: 20px;
+      }
+      .foot1 > div:nth-of-type(2) > p {
+        padding-left: 150px;
+      }
+      .foot1 > div:nth-of-type(2) > div > input {
+        padding: 10px;
+        width: 100%;
+      }
+      .foot2 {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 20px;
+      }
+      .third {
+        border-top: 2px solid black;
+        margin-top: 10px;
+      }
+      .third > div > h1 {
+        padding: 10px;
+        font-size: 30px;
+      }
+      .third > div > div {
+        display: flex;
+        gap: 15px;
+        padding: 25px 0px 100px 0px;
+      }
+      .third > div > div > div {
+        width: 400px;
+      }
+      .third > div > div > div > p {
+        font-size: 22px;
+        padding: 5px;
+      }
+      .third > div > div > div > span {
+        padding: 10px;
+      }
+      .second {
+        padding: 100px 0px;
+      }
+      .second > div {
+        display: flex;
+        justify-content: space-between;
+      }
+      .second > div > div {
+        border: 1px solid black;
+        padding: 30px 50px;
+        border: none;
+      }
+      .second > div > div:nth-of-type(1) {
+        width: 750px;
+        background-color: #c4e0fb;
+      }
+      .second > div > div:nth-of-type(1) > div > p {
+        padding: 5px;
+      }
+      .second > div > div:nth-of-type(1) > div > p:nth-of-type(2),
+      .second > div > div:nth-of-type(1) > div > p:nth-of-type(3) {
+        font-size: 30px;
+      }
+      .second > div > div:nth-of-type(1) > div {
+        padding-top: 10px;
+      }
+      .second > div > div:nth-of-type(1) > div > input {
+        padding: 10px;
+        width: 300px;
+        background-color: #c4e0fb;
+        border-radius: 5px;
+      }
+      .second > div > div:nth-of-type(1) > div > button {
+        background-color: black;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 5px;
+      }
+      .second > div > div:nth-of-type(2) {
+        width: 530px;
+        background-color: #fbe8c4;
+        text-align: center;
+      }
+      .first {
+        padding: 20px;
+        display: grid;
+        gap: 20px;
+      }
+      .first > div:nth-of-type(1) {
+        padding: 10px;
+        border: 1px solid aqua;
+        border-radius: 25px;
+        width: 100px;
+        font-size: 13px;
+      }
+      .first > h1 {
+        font-size: 35px;
+        padding-bottom: 30px;
+      }
+      .box {
+        display: flex;
+      }
+      .box > article {
+        width: 70%;
+        color: grey;
+      }
+      .box > article > div {
+        padding: 30px 0px;
+      }
+      .box > article > div > div,
+      .box > article > div > p,
+      .box > article > div > h2,
+      .box > article > div > ol,
+      .box > article > div > ul {
+        padding: 20px 0px;
+      }
+      .box > article > div > p {
+        font-size: 20px;
+      }
+      .box > article > div > h2 {
+        font-size: 28px;
+        color: black;
+      }
+      .box > article > div > ol > li,
+      .box > article > div > ul > li {
+        font-size: 18px;
+        padding: 10px 5px 10px 0px;
+      }
+      .right {
+        width: 350px;
+        border-top: 3px solid grey;
+        padding: 30px;
+        position: relative;
+      }
+      .right>div {
+          display: grid;
+          gap: 20px;
+          position:sticky;
+          top: 0px;
+    }
+    .right>div>div:nth-of-type(1) {
+        display: flex;
+    }
+    .right>div>div:nth-of-type(1)>div{
+          width: 75px;
+          padding: 10px;
+    }
+    .right>div>div:nth-of-type(1)>div>img{
+        border-radius: 50%;
+    }
+    .right>div>div:nth-of-type(1)>div>p:nth-of-type(1) {
+        font-size: 15px;
+        width: 100px;
+        font-weight: 600;
+        padding: 5px 0px;
+    }
+    .right>div:nth-of-type(1)>div>p:nth-of-type(2) {
+        font-size: 10px;
+        margin-bottom: 20px;
+    }
+    .card {
+        border: 1px solid grey;
+        padding: 10px;
+    }
+    .card>p {
+        font-size: 20px;
+        padding: 10px 0px;
+    }
+    .card>div>input {
+        padding: 10px;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .card>div>button {
+        background-color: black;
+        color: white;
+        width: 100%;
+        padding: 10px ;
+        border-radius: 5px;
+    }
+    .right>div>div:nth-of-type(4) {
+        padding: 10px;
+    }
+    .right>div>div:nth-of-type(4)>p>span>i {
+        border: 1px solid grey;
+        padding: 5px;
+        border-radius: 50px;
+    }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav class="con2">
+        <div><i class="fa-solid fa-bars"></i></div>
+        <div><h1>JOURNAX</h1></div>
+        <div><button>Subscribe</button></div>
+      </nav>
+      <hr />
+      <nav class="con2 nav2">
+        <span>Health </span>
+        <span>Politics</span>
+        <span>Sports</span>
+        <span> World News</span>
+        <span>Business</span>
+        <span>Technology</span>
+        <span>Cart (0)</span>
+      </nav>
+      <hr />
+    </header>
+    <main>
+      <section class="first con2">
+        <div>world News</div>
+        <h1>Unveiling the stories & significance of historic landmarks</h1>
+        <div class="box">
+          <article class="left">
+            <div class="article1">
+              <div>
+                <img
+                  src="https://cdn.prod.website-files.com/667bd81876339d31af9381fa/667eb0b7962fe6b39d24c427_news-main-13.jpg"
+                  alt="image1"
+                  style="width: 100%"
+                />
+              </div>
+              <p>
+                Welcome to Journax, your trusted source for breaking news,
+                in-depth analysis, and insightful commentary. Stay informed with
+                our up-to-the-minute coverage on politics, business, technology,
+                sports, entertainment, and more. Our mission is to deliver
+                reliable news that matters to you, when it matters most.
+              </p>
+              <h2>Editor's picks featured news and opinions</h2>
+              <ol>
+                <li>
+                  Nibh libero condimentum duis turpis pretium molestie netus
+                  turpis
+                </li>
+                <li>Turpis lacus sed sagittis mollis sitquam ipsum</li>
+                <li>Feugiat maurisac ultricies cursus sollicitudin acmauris</li>
+                <li>
+                  Arcu rutrum luctus libero elementum quis libero enim utgravida
+                  quis
+                </li>
+                <li>
+                  Molestie sem cursus pulvinar euismod pulvinar nisi at nisi
+                  consequat integer neque arcu.
+                </li>
+                <li>
+                  Consequat vulputate pellentesque cursus venenatis egestas.
+                </li>
+              </ol>
+            </div>
+            <div class="article2">
+              <div>
+                <img
+                  src="https://cdn.prod.website-files.com/667bd81876339d31af9381fa/667d34ee99b2f5b8a4c0b4cd_667c017bd050f576564c1ac8_media-1.jpeg"
+                  alt="image2"
+                  style="width: 100%"
+                />
+              </div>
+              <div>
+                <p>
+                  A breakthrough treatment for cancer has shown promising
+                  results in early trials, bringing hope to patients worldwide.
+                  This groundbreaking development represents a significant step
+                  forward in the fight against cancer, offering new avenues for
+                  treatment and inspiring optimism.
+                </p>
+              </div>
+              <p>
+                Odio augue morbi elementum lectus metus nec phasellus. Donec non
+                auctor tellus nibh elementum nunc elementum. Aenean diam sed
+                tincidunt urna. Vitae magna nam vitae mauris. Pellentesque lacus
+                eget mattis gravida elementum nisi vestibulum. Morbi lectus
+                massa in cras cursus id scelerisque tincidunt.
+              </p>
+              <h2>Entertainment buzz celebrity news and trending topics</h2>
+              <p>
+                Sollicitudin feugiat nisl, lorem interdum pellentesque. Massa,
+                scelerisque in placerat rutrum hac scelerisque habitasse. Amet
+                ultricies massa nec, ornare faucibus facilisi quisque leo
+                iaculis. Velit consequat in aliquet ullamcorper tristique
+                pulvinar adipiscing sem. Imperdiet augue cras pretium at lectus
+                congue leo feugiat. Eget sit nunc nullam fringilla ut sem eget
+                quis.
+              </p>
+              <ul>
+                <li>
+                  Sit vulputate aliquam cras aliquam etnibh congue consequat
+                  pellentesque
+                </li>
+                <li>
+                  Vestibulum massa aliquet odio mauris duis amet nsed dapibus
+                  porta est amet
+                </li>
+                <li>
+                  Urna augue arcu duis eget proin sed morbi purus sit nunc
+                  sodales aliquam
+                </li>
+                <li>
+                  Netus nunc risus interdum feugiat et nunc pellentesque mus.
+                </li>
+                <li>
+                  Egestas vitae orci mauris a donec convallis volutpat ac.
+                </li>
+              </ul>
+            </div>
+            <div class="article3">
+              <div>
+                <img
+                  src="https://cdn.prod.website-files.com/667bd81876339d31af9381fa/667d34eea58d269f0d294670_667c0191a2b386ce4a2f8029_media-2.jpeg"
+                  alt="image3"
+                  style="width: 100%"
+                />
+              </div>
+              <h3>Opinion pieces editorials and reader contributions</h3>
+              <p>
+                Ac amet turpis ornare rhoncus. Sed sed ornare elit ut commodo
+                feugiat commodo faucibus purus. Vitae sapien purus id eget neque
+                nulla posuere pellentesque turpis. Aliquam hac amet rhoncus
+                velit vel vitae. Sed lacinia neque amet quis lectus. Pharetra ut
+                volutpat mauris et turpis volutpat eu nisl. A lectus nisi
+                posuere egestas maecenas nulla.
+              </p>
+              <h3>
+                In-depth analysis explore comprehensive reports and insights
+              </h3>
+              <p>
+                Lobortis penatibus pharetra penatibus nunc morbi ut pulvinar
+                odio nunc. Blandit non a nec leo quis posuere auctor. Amet nunc
+                cras ut at. Gravida sit tempor dictumst odio eu nec blandit non.
+              </p>
+            </div>
+          </article>
+          <div class="right">
+            <div>
+              <div>
+                <div><img src="https://cdn.prod.website-files.com/667bd81876339d31af9381fa/667d0539f5cd6d3a8e8f15a0_author-main-02-p-500.jpg" alt="profile"  style="width: 100%;"/></div>
+                <div>
+                  <p>Marvin McKinney</p>
+                  <p>Publisher</p>
+                </div>
+              </div>
+              <div>
+                <p>Updated Jun 29, 2024 12:34 PM - 08 Minute</p>
+              </div>
+              <div class="card">
+                <div><img src="https://cdn.prod.website-files.com/660fedec1ab54b2595c51e30/667e4ad710355d8148af96e8_newletter-p-500.jpg" alt="image" style="width: 100%;" /></div>
+                <p>Stay informed with our latest news and updates.</p>
+
+                <div>
+                  <input type="text" placeholder="Enter your e-mail" />
+                </div>
+
+                <div>
+                  <button>Subscribe Now</button>
+                </div>
+              </div>
+              <div>
+                <p>
+                  Share with :
+                  <span><i class="fa-brands fa-x-twitter"></i></span>
+                  <span><i class="fa-brands fa-facebook"></i></span>
+                  <span><i class="fa-brands fa-youtube"></i></span>
+                  <span><i class="fa-brands fa-instagram"></i></span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="third con2">
+        <div>
+          <div>
+            <div>
+              <div>
+                <img
+                  src="https://cdn.prod.website-files.com/667bd81876339d31af9381fa/667eb0e29ed33b549f7d769c_news-thumb-14-p-500.jpg"
+                  alt="image"
+                  style="width: 100%"
+                />
+              </div>
+              <p>
+                The rise of next-gen sports stars
+              </p>
+              <span>From breakthrough performances to inspiring stories, we
+                spotlight the next generation of athletes making waves in
+                the sports world.</span>
+              <p>Leslie Alexander</p>
+            </div>
+            <div>
+              <div>
+                <img
+                  src="https://cdn.prod.website-files.com/667bd81876339d31af9381fa/667eb1252d8c203c005b88fe_news-thumb-15-p-500.jpg"
+                  alt="image"
+                  style="width: 100%"
+                />
+              </div>
+              <p>Advancements in electric vehicle technology</p>
+              <span>Explore the latest innovations shaping the future of electric
+                vehicles. From cutting-edge battery technologies to
+                advancements in autonomous driving.</span>
+              <p>Wade Warren</s>
+            </div>
+            <div>
+              <div>
+                <img
+                  src="https://cdn.prod.website-files.com/667bd81876339d31af9381fa/667eb15df0b53dd34be6a682_news-thumb-16-p-500.jpg"
+                  alt="image"
+                  style="width: 100%"
+                />
+              </div>
+              <p>
+                Tech giant acquires Al startup for $2 billion
+              </p>
+              <span>Acquired an Al startup for $2 billion, aiming to enhance its
+                technological capabilities and expand its influence in the
+                artificial intelligence sector.</span>
+              <p>Theresa Webb</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="third con2">
+        <div>
+          <h1>Editors Choice</h1>
+          <div>
+            <div>
+              <div>
+                <img
+                  src="https://cdn.prod.website-files.com/667bd81876339d31af9381fa/667fa6660746e795774eb436_editor-news-01.jpg"
+                  alt="image"
+                  style="width: 100%"
+                />
+              </div>
+              <p>
+                International community expresses
+hope for resolution
+              </p>
+              <span>World News </span>
+            
+            </div>
+            <div>
+              <div>
+                <img
+                  src="https://cdn.prod.website-files.com/667bd81876339d31af9381fa/667fa71e7dde9e3d024847d7_editor-news-02.jpg"
+                  alt="image"
+                  style="width: 100%"
+                />
+              </div>
+              <p>Season's most dramatic races</p>
+              <span>Sports</span>
+             
+            </div>
+            <div>
+              <div>
+                <img
+                  src="https://cdn.prod.website-files.com/667bd81876339d31af9381fa/667fa762dba43638cc6ed29d_editor-news-03.jpg"
+                  alt="image"
+                  style="width: 100%"
+                />
+              </div>
+              <p>
+                Innovations driving the future of
+transportation
+              </p>
+              <span>Technology </span>
+              
+            </div>
+            <div>
+                <div>
+                  <img
+                    src="https://cdn.prod.website-files.com/667bd81876339d31af9381fa/667fa762dba43638cc6ed29d_editor-news-03.jpg"
+                    alt="image"
+                    style="width: 100%"
+                  />
+                </div>
+                <p>
+                    Supply chain disruptions challenges
+                    and solutions for businesses
+                    worldwide
+                </p>
+                <span>Business </span>
+                
+              </div>
+          </div>
+        </div>
+      </section>
+      <section class="third con2">
+        <div>
+          <h1>Staff Writers</h1>
+          <div>
+            <div>
+              <div>
+                <img
+                  src="https://cdn.prod.website-files.com/667bd81876339d31af9381fa/667d0511259c918e72509691_author-main-01-p-500.jpg"
+                  alt="image"
+                  style="width: 100%"
+                />
+              </div>
+              <p>
+                Theresa Webb
+              </p>
+              <span>Senior Reporter </span>
+            
+            </div>
+            <div>
+              <div>
+                <img
+                  src="https://cdn.prod.website-files.com/667bd81876339d31af9381fa/667d0539f5cd6d3a8e8f15a0_author-main-02-p-500.jpg"
+                  alt="image"
+                  style="width: 100%"
+                />
+              </div>
+              <p>Marvin McKinney 
+                </p>
+              <span>Publisher</span>
+             
+            </div>
+            <div>
+              <div>
+                <img
+                  src="https://cdn.prod.website-files.com/667bd81876339d31af9381fa/667d056c783d376b3fe21bb7_author-main-03-p-500.jpg"
+                  alt="image"
+                  style="width: 100%"
+                />
+              </div>
+              <p>
+                Wade Warren
+              </p>
+              <span> Content Writer </span>
+              
+            </div>
+            <div>
+                <div>
+                  <img
+                    src="https://cdn.prod.website-files.com/667bd81876339d31af9381fa/667d058ec1e876bede9c10b2_author-main-04-p-500.jpg"
+                    alt="image"
+                    style="width: 100%"
+                  />
+                </div>
+                <p>
+                    Leslie Alexander
+                </p>
+                <span>Editorialist </span>
+                
+              </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="second con2">
+        <div>
+          <div>
+            <div>
+              <p>Subscribe Our Newsletter</p>
+              <p>Empower yourself subscribe to our expert</p>
+              <p>analysis and insights</p>
+              <p>From breaking news to thought-provoking opinion pieces, our</p>
+              <p>newsletter keeps you informed.</p>
+            </div>
+            <div>
+              <input
+                type="text"
+                name=""
+                id=""
+                placeholder="Enter your e-mail..."
+              />
+              <button>Subsrcibe Now</button>
+            </div>
+          </div>
+          <div>
+            <img
+              src="https://cdn.prod.website-files.com/660fedec1ab54b2595c51e30/667d0971bf5cc7d1c3d3ff9c_cta-mobile.png"
+              alt="image"
+            />
+          </div>
+        </div>
+      </section>
+      <section class="third con2">
+        <div>
+          <h1>Similar News</h1>
+          <div>
+            <div>
+              <div>
+                <img
+                  src="https://cdn.prod.website-files.com/667bd81876339d31af9381fa/667eb078a95287743118956e_news-thumb-12-p-800.jpg"
+                  alt="image"
+                  style="width: 100%"
+                />
+              </div>
+              <p>
+                Boardroom insights leadership strategies & business tactics from
+                top executives
+              </p>
+              <span>June 28, 2024 ---- </span>
+              <span>Business</span>
+            </div>
+            <div>
+              <div>
+                <img
+                  src="https://cdn.prod.website-files.com/667bd81876339d31af9381fa/667eb15df0b53dd34be6a682_news-thumb-16-p-800.jpg"
+                  alt="image"
+                  style="width: 100%"
+                />
+              </div>
+              <p>Tech giant acquires Al startup for $2 billion</p>
+              <span>June 28, 2024 ---- </span>
+              <span>Business</span>
+            </div>
+            <div>
+              <div>
+                <img
+                  src="https://cdn.prod.website-files.com/667bd81876339d31af9381fa/667d34b4e203e838feaa8c24_news-thumb-01-p-800.jpg"
+                  alt="image"
+                  style="width: 100%"
+                />
+              </div>
+              <p>
+                Keeping you updated on local events, news & happenings in your
+                area
+              </p>
+              <span>June 28, 2024 ---- </span>
+              <span>Politics</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="foot1 con2">
+        <div>
+          <div>
+            <h4>Pages</h4>
+            <p>About us</p>
+            <p>News</p>
+            <p>Authors</p>
+            <p>Newsletter Plans</p>
+            <p>Contact us</p>
+            <p>Sign Up</p>
+          </div>
+          <div>
+            <h4>Category</h4>
+            <p>Health</p>
+            <p>Politics</p>
+            <p>Sports</p>
+            <p>World News</p>
+            <p>Business</p>
+            <p>Technology</p>
+          </div>
+          <div>
+            <h4>Resources</h4>
+            <p>Privacy Policy</p>
+            <p>Advertise</p>
+            <p>Terms & Conditions</p>
+            <p>License</p>
+            <p>Style Guide</p>
+          </div>
+        </div>
+        <div>
+          <div>
+            <span><i class="fa-brands fa-x-twitter"></i></span>
+            <span><i class="fa-brands fa-facebook"></i></span>
+            <span><i class="fa-brands fa-youtube"></i></span>
+            <span><i class="fa-brands fa-instagram"></i></span>
+            <span><i class="fa-solid fa-rss"></i></span>
+          </div>
+          <p>info@example.com</p>
+          <div>
+            <input
+              type="text"
+              name=""
+              id=""
+              placeholder="Advertise with us                                         > "
+            />
+          </div>
+        </div>
+      </div>
+      <hr />
+
+      <div class="foot2 con2">
+        <div>
+          <img
+            src="https://cdn.prod.website-files.com/660fedec1ab54b2595c51e30/667bf2ff264fc076bd9227c5_journax.svg"
+            alt="image"
+          />
+        </div>
+        <div>
+          <span>2024 Joumax. </span>
+          <span>Designed by Nixar. Powered by Webflow.</span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
