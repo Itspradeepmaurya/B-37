@@ -1,0 +1,1605 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coinswitch</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: sans-serif;
+      }
+      .con2 {
+        max-width: 1400px;
+        margin: auto;
+      }
+      header > nav {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+      }
+      header > nav > div:nth-of-type(2) > span {
+        padding: 10px 40px;
+      }
+      header > nav > div:nth-of-type(2) > button {
+        border: 2px solid #aee813;
+        background-color: #aee813;
+        border-radius: 10px;
+        padding: 10px 40px;
+      }
+      .con3 {
+        max-width: 1150px;
+        margin: auto;
+      }
+      main {
+        border: 1px solid grey;
+        border-radius: 50px;
+      }
+      div#anim>div {
+        height: 20vh;
+        
+        width: 100%;
+        /* background-color: green; */
+        
+        display: flex;
+        flex-wrap: wrap;
+        overflow: hidden;
+        min-height: 800px;
+        position: relative;
+      }
+      div#anim>div>div {
+        width: 70px;
+        height: 70px;
+        border: 1px solid rgba(206, 204, 204, 0.377);
+        background-color: rgba(255, 255, 255, 0);
+        transition: background-color 0.5s ease-in-out;
+      }
+      div#anim>div>div:hover {
+        background-color: rgba(206, 204, 204, 0.377);
+        transition: background-color .1s ease-in-out; 
+      }
+      div#anim {
+        position: relative;
+      }
+      div#anim>div{
+           z-index: 2;
+       }
+
+      .section1>div {
+      
+        background: radial-gradient(#ebf1ff, white);
+      }
+      .section1>div>div>img {
+        padding: 80px 0px;
+        position: absolute;
+        top: 0px;
+       
+      }
+      .section1>div.con3>h1 {
+        font-size: 100px;
+        color: black;
+        position: absolute;
+        top: 100px;
+      }
+      .section1>div>p:nth-of-type(1)  {
+        font-size: 30px;
+        padding-top: 60px;
+        position: absolute;
+        top: 350px;
+      }
+      .section1>div>p:nth-of-type(2) {
+       padding-bottom: 100px;
+       font-size: 30px;
+       position: absolute;
+        top: 500px;
+      }
+      .section1>div>button {
+         font-size: 20px;
+         background-color: black;
+         color: white;
+         border: 2px solid black;
+         border-radius: 15px;
+         padding: 15px 40px;
+         position: absolute;
+        top: 600px;
+      }
+      .section2>div {
+        display: flex;
+        padding:150px 10px;
+      }
+      .section2>div>div:nth-of-type(2) {
+        padding: 0pc 80px;
+      }
+      .section2>div>div:nth-of-type(2)>p:nth-of-type(1){
+        font-size: 30px;
+        padding: 20px 0px;
+        color: #4b4760;
+      }
+      .section2>div>div:nth-of-type(2)>p:nth-of-type(2){
+        font-size: 18px;
+        padding: 20px 0px;
+        color: grey;
+      }
+      div.con3>h1 {
+        font-size: 50px;
+        padding: 50px 0px;
+        color: #4b4760;
+      }
+      .section3>div>div {
+        display: flex;
+        gap: 35px;
+        color: #4b4760;
+      }
+      .section3>div>div>div {
+        padding: 100px 0px;
+        width: 200px;
+      }
+      .section4 {
+        background: radial-gradient(#ebf1ff, white);
+      }
+      .section4>div>div.box {
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          gap: 40px;
+      } 
+      .card {
+        padding: 20px;
+        border: 1px solid;
+        background-color: white;
+        border-radius: 15px;
+        border: none;
+      }
+      .card>div {
+        width: 140px;
+        height: 100px;
+      }
+      .card>div>img {
+         width: 100%;
+      }
+      .card>h2 , .card>p {
+        color: #4b4760;
+        padding: 10px 0px;
+      }
+      .card>p {
+        color: grey;
+      }
+      .section5 , .section6 {
+        padding:100px 0px;
+      }
+      .section5>div>h1 , .section6>div>h1{
+        color: black;
+      }
+      .section5>div>div.box  , .section6>div>div.box{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 50px;
+      }
+      .section5>div.con3>div.box>div.card , .section6>div.con3>div.box>div.card{
+        font-size: 20px;
+        height: 600px;
+      }
+      .section5>div.con3>div.box>div.card>div {
+        width: 260px;
+      }
+      .section5>div.con3>div.box>div.card>div>img {
+        width: 100%;
+      }
+      .section5>div.con3>div.box>div.card>h3{
+        padding-top: 200px;
+      }
+      .section6>div.con3>div.box>div.card>div {
+        width: 100px;
+      }
+      .section6>div>div.box{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 50px;
+      }
+      .section7>div.con3 {
+        border: 1px solid;
+        border-radius: 20px;
+        display: flex;
+        color: white;
+        background-color:#1b1e2d ;
+        padding: 50px;
+        height: 800px;
+      }
+      .left ,.right {
+        padding: 50px;
+      }
+      .left>h1  {
+        font-size: 50px;
+        padding-top: 50px;
+      }
+      .left>p {
+        font-size: 30px;
+        width: 500px;
+        padding-top: 50px;
+      }
+      .left>div>span>i {
+        font-size: 25px;
+        padding: 0px 30px 0px 0px;
+        margin-top: 20px;
+      }
+     .right {
+      display:grid;
+     }
+     .right>div>input , .right>div>textarea , .right>div>button {
+      padding: 25px;
+      width: 400px;
+      border-radius: 15px;
+     }
+     .right>div>button {
+      background-color: #aee813;
+      font-size: 20px;
+     }
+     .section8>div>div.box {
+      display: grid;
+      grid-template-columns: repeat(3 , 1fr);
+     }
+     .section8>div>div.box>div.card>div{
+       width: 350px;
+     }
+     .section8>div>div.box>div.card>p:nth-of-type(1) {
+      margin-top: 130px;
+      color: black;
+      font-weight: 600;
+      font-size: 20px;
+     }
+     .section8>div>div.box>div.card>div>img{
+       width: 100%;
+       border-radius: 20px;
+      }
+      footer {
+        background-color: #1b1e2d;
+        color: white;
+        height: 700px;
+      }
+      footer>div.con2 {
+        display: grid;
+        grid-template-rows: repeat(3, 1fr);
+      }
+      footer>div.con2>.upperfoot {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        padding: 10px;
+        border-bottom: 1px solid white;
+      }
+      footer>div.con2>.upperfoot>div:nth-of-type(1) {
+        padding: 20px;
+        display: grid;
+        gap: 50px;
+        font-size: 20px;
+        font-weight: 600;
+      }
+      footer>div.con2>.upperfoot>div:nth-of-type(1)>div>span>i {
+        padding: 10px;
+        border-radius: 50px;
+        margin-inline:5px;
+        background-color: #323544;
+      }
+      footer>div.con2>.upperfoot>div:nth-of-type(2) {
+        width: 500px;
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        font-size: 20px;
+      }
+      footer>div.con2>.middlefoot {
+        display: grid;
+        grid-template-columns: 800px 300px;
+        border-bottom: 1px solid white;
+        margin-top: 30px;
+        width: 100%;
+      }
+      .middlefoot>div:nth-of-type(1) {
+        display: grid;
+        grid-template-columns: repeat(3 , 1fr);
+        padding: 7px;
+      }
+      .middlefoot>div:nth-of-type(1)>div>p , .middlefoot>div:nth-of-type(2)>p {
+        padding: 5px;
+        color: #5f616d;
+      }
+      .middlefoot>div:nth-of-type(1)>div>p:nth-of-type(1) , .middlefoot>div:nth-of-type(2)>p:nth-of-type(1) {
+        font-size: 18px;
+        font-weight: 600;
+        color: white;
+      }
+      .lowerfoot , .lowerfoot>ul{
+        display: flex;
+        gap: 45px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        color: #5f616d;
+      }
+    </style>
+    <script src="https://kit.fontawesome.com/91a6d2fe0f.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <header>
+      <nav class="con2">
+        <div>
+          <img
+            src="https://coinswitch.co/_next/static/media/logo.01525825.svg"
+            alt="image"
+          />
+        </div>
+        <div>
+          <span>Product v</span>
+          <span>Coins</span>
+          <span>Ventures</span>
+          <span>Blog</span>
+          <span>Company v</span>
+          <button>Login To Pro</button>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div id="anim">
+        <div>
+            
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div> 
+      </div>
+      <section class="section1 con2">
+        <div class="con3">
+          <div>
+            <img
+              src="https://coinswitch.co/_next/static/media/logo.01525825.svg"
+              alt="image"
+            />
+          </div>
+          <h1>Your Innovation</h1>
+          <h1 style="color:#6d90fc ; position: absolute;
+          top: 200px;
+          ">Our Fuel</h1>
+          <p>CoinSwitch Ventures invests in the most promising Web3 and</p>
+          <p>blockchain projects in India. Does that sound like you?</p>
+          <button>Apply Now</button>
+        </div>
+      </section>
+      <section class="section2 con2">
+        <div class="con3">
+          <div>
+            <img
+              src="https://s3.ap-southeast-1.amazonaws.com/files.coinswitch.co/images/blockchain.webp"
+              alt="image"
+            />
+          </div>
+          <div>
+            <p>
+              We believe that Web3 and blockchain are the foundations of the new
+              digital, decentralized economy.
+            </p>
+            <p>
+              To this end, we’re partnering with startups that are advancing the
+              future of Blockchain technology. We provide early stage founders
+              with the capital, network connections and most importantly, the
+              advice they need to transform the Web3 landscape in India.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="section3 con2">
+        <div class="con3">
+          <h1>Why it Matters?</h1>
+          <div>
+            <div>
+              <div>
+                <img
+                  src="https://s3.ap-southeast-1.amazonaws.com/files.coinswitch.co/images/partnership.svg"
+                  alt="image"
+                />
+              </div>
+              <p>Partnership with India's largest wealth tech destination</p>
+            </div>
+            <div>
+              <div>
+                <img
+                  src="https://s3.ap-southeast-1.amazonaws.com/files.coinswitch.co/images/network.svg"
+                  alt="image"
+                />
+              </div>
+              <p>Access to a network of 70+ global venture capital partners</p>
+            </div>
+            <div>
+              <div>
+                <img
+                  src="https://s3.ap-southeast-1.amazonaws.com/files.coinswitch.co/images/capital.svg"
+                  alt="image"
+                />
+              </div>
+              <p>Capital infusion up to $250,000</p>
+            </div>
+            <div>
+              <div>
+                <img
+                  src="https://s3.ap-southeast-1.amazonaws.com/files.coinswitch.co/images/mentorship.svg"
+                  alt="image"
+                />
+              </div>
+              <p>Mentorship from in-house experts</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section4">
+        <div class="con3">
+          <h1>Our Selected Portfolio</h1>
+          <div class="box">
+            <div class="card">
+              <div >
+                <img
+                  src="https://s3.ap-southeast-1.amazonaws.com/files.coinswitch.co/images/pyor.svg"
+                  alt="image" 
+                />
+              </div>
+              <h2>PYOR</h2>
+              <p>Blockchain data & research</p>
+            </div>
+            <div class="card">
+              <div>
+                <img
+                  src="https://s3.ap-southeast-1.amazonaws.com/files.coinswitch.co/images/silencelab.svg"
+                  alt="image"
+                />
+              </div>
+              <h2>Silence labs</h2>
+              <p>Web3 wallet tech provider</p>
+            </div>
+            <div class="card">
+              <div>
+                <img
+                  src="https://s3.ap-southeast-1.amazonaws.com/files.coinswitch.co/images/shield.svg"
+                  alt="image"
+                />
+              </div>
+              <h2>Shield</h2>
+              <p>Web3 community management tools</p>
+            </div>
+            <div class="card">
+              <div>
+                <img
+                  src="https://s3.ap-southeast-1.amazonaws.com/files.coinswitch.co/images/polytrade.svg"
+                  alt="image"
+                />
+              </div>
+              <h2>PolyTrade</h2>
+              <p>DeFi liquidity for trade finance</p>
+            </div>
+            <div class="card">
+              <div>
+                <img
+                  src="https://s3.ap-southeast-1.amazonaws.com/files.coinswitch.co/images/airstack.svg"
+                  alt="image"
+                />
+              </div>
+              <h2>AirStack</h2>
+              <p>Blockchain data analytics</p>
+            </div>
+            <div class="card">
+              <div style="width: 100px;">
+                <img
+                  src="https://s3.ap-southeast-1.amazonaws.com/files.coinswitch.co/images/playzap.svg"
+                  alt="image"
+                />
+              </div>
+              <h2>PlayZap</h2>
+              <p>Skill-to-earn Web3 gaming platform</p>
+            </div>
+            <div class="card">
+              <div >
+                <img
+                  src="https://s3.ap-southeast-1.amazonaws.com/files.coinswitch.co/images/BlockScholes.svg"
+                  alt="image" 
+                />
+              </div>
+              <h2>BlockScholes</h2>
+              <p>Institutional-grade crypto analytics</p>
+            </div>
+            <div class="card">
+              <div style="width: 100px;">
+                <img
+                  src="https://s3.ap-southeast-1.amazonaws.com/files.coinswitch.co/images/stan.svg"
+                  alt="image"
+                />
+              </div>
+              <h2>Stan</h2>
+              <p>E-Sports Fan Engagement Platform</p>
+            </div>
+            <div class="card">
+              <div>
+                <img
+                  src="https://s3.ap-southeast-1.amazonaws.com/files.coinswitch.co/images/WallChain.svg"
+                  alt="image"
+                />
+              </div>
+              <h2>Wallchain</h2>
+              <p>Most used MEV Rebate solution for EVM chains</p>
+            </div>
+            <div class="card">
+              <div>
+                <img
+                  src="https://s3.ap-southeast-1.amazonaws.com/files.coinswitch.co/images/nGrave.svg"
+                  alt="image"
+                />
+              </div>
+              <h2>NGrave</h2>
+              <p>Safest Crypto Cold Wallet</p>
+            </div>
+            <div class="card">
+              <div style="width: 100px;">
+                <img
+                  src="https://s3.ap-southeast-1.amazonaws.com/files.coinswitch.co/images/griffy.svg"
+                  alt="image"
+                />
+              </div>
+              <h2>Griffy</h2>
+              <p>Nasdaq for Opinion Trading</p>
+            </div>
+            <div class="card">
+              <div>
+                <img
+                  src="https://s3.ap-southeast-1.amazonaws.com/files.coinswitch.co/images/bitscrunch.svg"
+                  alt="image"
+                />
+              </div>
+              <h2>BitsCrunch</h2>
+              <p>NFT forensics tool</p>
+            </div>
+          </div>
+        </div>
+        
+      </section>
+      <section class="section5 con2">
+        <div class="con3">
+          <h1>Our Team of Experts</h1>
+          <div class="box">
+            <div class="card">
+              <div>
+                <img
+                  src="https://coinswitch.co/_next/static/media/ashish_new.6b6406a1.png"
+                  alt="image"
+                />
+              </div>
+              <h3>Ashish Singhal</h3>
+              <p>Co-founder & Group CEO, PeepalCo Group</p>
+              <p>
+                A Builder focused on simplicity and user satisfaction, Ashish is
+                also working toward a blockchain-based technological shift in
+                India in his role as the Co-Chair of the BACC (Blockchain and
+                Crypto Assets Council).
+              </p>
+            </div>
+            <div class="card">
+              <div>
+                <img
+                  src="https://s3.ap-southeast-1.amazonaws.com/files.coinswitch.co/images/parth.webp"
+                  alt="image"
+                />
+              </div>
+              <h3>Parth Chaturvedi</h3>
+              <p>Investment Lead, CoinSwitch</p>
+              <p>
+                An investment analyst turned blockchain evangelist, Parth is
+                leading efforts to strengthen the Web3 and Crypto ecosystem in
+                India.
+              </p>
+            </div>
+            <div class="card">
+              <div>
+                <img
+                  src="https://coinswitch.co/_next/static/media/vimal_new.8e9d6a5d.png"
+                  alt="image"
+                />
+              </div>
+              <h3>Co-founder & Group COO, PeepalCo Group</h3>
+              <p>Investment Lead, CoinSwitch</p>
+              <p>
+                An alumnus of Jaypee Institute of Information Technology and a
+                product builder at heart, Vimal is focused on implementing
+                strategies to meet CoinSwitch's organizational objectives.
+              </p>
+            </div>
+          </div>
+        </div>
+        
+      </section>
+      <section class="section6 con2">
+        <div class="con3">
+          <h1>Word on the Street</h1>
+          <div class="box">
+            <div class="card">
+              <div>
+                <img
+                  src="https://s3.ap-southeast-1.amazonaws.com/files.coinswitch.co/images/wordquote.svg"
+                  alt="image"
+                />
+              </div>
+              <p>
+                CoinSwitch Ventures has been a great value add in terms of how to
+                build a global protocol that is compliant, user friendly, and
+                forward looking.
+              </p>
+              <p>Piyush Gupta, PolyTrade</p>
+            </div>
+            <div class="card">
+              <div>
+                <img
+                  src="https://s3.ap-southeast-1.amazonaws.com/files.coinswitch.co/images/wordquote.svg"
+                  alt="image"
+                />
+              </div>
+              <p>
+                Our CoinSwitch partners first inspired our team to build detection
+                systems for malicious wallet history, which is now our most
+                popular API module by far.
+              </p>
+              <p>Emmanuel Udotong, Shield</p>
+            </div>
+            <div class="card">
+              <div>
+                <img
+                  src="https://s3.ap-southeast-1.amazonaws.com/files.coinswitch.co/images/wordquote.svg"
+                  alt="image"
+                />
+              </div>
+              <p>
+                Coinswitch has been a valuable partner for Airstack, helping with
+                numerous investor introductions and business development.
+              </p>
+              <p>Jason Goldberg, Airstack</p>
+            </div>
+            <div class="card">
+              <div>
+                <img
+                  src="https://s3.ap-southeast-1.amazonaws.com/files.coinswitch.co/images/wordquote.svg"
+                  alt="image"
+                />
+              </div>
+              <p>
+                CoinSwitch Ventures, though a new venture arm, there is a lot of
+                support from validating the tech to making connections. Since they
+                are one of the market leaders in india, we get a lot of market
+                share from the country
+              </p>
+              <p>Vijay, BitsCrunch</p>
+            </div>
+          </div>
+        </div>      
+      </section>
+      <section class="section7 con2">
+        <div class="con3">
+          <div class="left">
+            <div>
+              <img
+                src="https://s3.ap-southeast-1.amazonaws.com/files.coinswitch.co/images/letstalk.svg"
+                alt="image"
+              />
+            </div>
+            <h1>Let's Talk</h1>
+            <p>
+              If you are, or know of budding Web3 projects, share your details
+              and we'll get in touch!
+            </p>
+            <p>FOLLOW US ON</p>
+            <div>
+              <span><i class="fa-brands fa-instagram"></i></span>
+              <span><i class="fa-brands fa-facebook"></i></span>
+              <span><i class="fa-brands fa-twitter"></i></span>
+              <span><i class="fa-brands fa-telegram"></i></span>
+              <span><i class="fa-brands fa-youtube"></i></span>
+              <span><i class="fa-brands fa-linkedin"></i></span>
+            </div>
+          </div>
+          <div class="right">
+            <div><input type="text" name="" id="" placeholder="Tell us your name" /></div>
+            <div><input type="text" name="" id=""  placeholder="Your email"/></div>
+            <div><input type="text" name="" id=""  placeholder="Mobile number"/></div>
+            <div><textarea name="" id="" cols="30" rows="10" placeholder="Describe your project"></textarea></div>
+            <div><button>Apply Now</button></div>
+          </div>
+        </div>
+      </section>
+      <section class="section8 con2">
+        <div class="con3">
+          <h1>Media</h1>
+          <div class="box">
+            <div class="card">
+              <div>
+                <img
+                  src="https://s3.ap-southeast-1.amazonaws.com/files.coinswitch.co/images/mediaimage1.png"
+                  alt="image"
+                />
+              </div>
+              <p>Web3 protocol Polytrade raises $3.8M to improve global trade</p>
+              <p>30 March 2023</p>
+            </div>
+            <div class="card">
+              <div style="width: 320px;">
+                <img
+                  src="https://s3.ap-southeast-1.amazonaws.com/files.coinswitch.co/images/mediaimage2.png"
+                  alt="image"
+                />
+              </div>
+              <p>
+                Crypto analytics firm Block Scholes raises $3.3 million to boost
+                growth
+              </p>
+              <p>10 November 2023</p>
+            </div>
+            <div class="card">
+              <div>
+                <img
+                  src="https://s3.ap-southeast-1.amazonaws.com/files.coinswitch.co/images/mediaimage3.png"
+                  alt="image"
+                />
+              </div>
+              <p>
+                PYOR raises $4mn in seed funding led by Castle Island Ventures
+              </p>
+              <p>18 May 2023</p>
+            </div>
+          </div>
+        </div>
+       
+      </section>
+    </main>
+    <footer>
+      <div class="con2">
+        <section class="upperfoot con3">
+          <div>
+            <div>
+              <img
+                src="https://coinswitch.co/_next/static/media/logo.01525825.svg"
+                alt="image" style="background-color: white; border-radius: 20px;padding: 20px;"
+              />
+            </div>
+            <p>Follow us on</p>
+            <div>
+              <span><i class="fa-brands fa-instagram"></i></span>
+              <span><i class="fa-brands fa-facebook"></i></span>
+              <span><i class="fa-brands fa-twitter"></i></span>
+              <span><i class="fa-brands fa-telegram"></i></span>
+              <span><i class="fa-brands fa-youtube"></i></span>
+              <span><i class="fa-brands fa-linkedin"></i></span>
+            </div>
+          </div>
+          <div>
+            <div>
+              <p>We are available on</p>
+              <p>most familiar channels</p>
+            </div>
+            <div>
+              <p style="color: #5f616d;">Email Us</p>
+              <p>support@coinswitch.co</p>
+            </div>
+            <div>
+              <p style="color: #5f616d;">Raise a Ticket</p>
+              <p>Click here</p>
+            </div>
+          </div>
+        </section>
+        
+        <section class="middlefoot con3">
+          <div>
+            <div>
+              <p>Products</p>
+              <p>Systematic Investment Plan</p>
+            </div>
+            <div>
+              <p>Buy Crypto</p>
+              <p>Buy Bitcoin</p>
+              <p>Buy Ethereum</p>
+              <p>Buy Doge coin</p>
+              <p>Buy Shiba Inu</p>
+            </div>
+            <div>
+              <p>Policies</p>
+              <p>T&C</p>
+              <p>AML Policy</p>
+              <p>Privacy Policy</p>
+              <p>Trading Policy</p>
+              <p>Cookie Policy</p>
+            </div>
+          </div>
+          <div>
+            <p>Company</p>
+            <p>About us</p>
+            <p>Ventures</p>
+            <p>Careers</p>
+            <p>Press</p>
+          </div>
+        </section>
+        <section class="lowerfoot con3">
+          <span>
+            2018-2023 and ™ Bitkuber Investments Private Limited </span>
+            <ul>
+              <li>Terms & Conditions</li>
+              <li>Privacy Policy</li>
+              <li>Privacy Policy</li>
+            </ul>
+            
+          
+        </section>
+      </div>
+      
+    </footer>
+  </body>
+</html>
