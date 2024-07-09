@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .con2 {
+            max-width: 1300px;
+            margin: auto;
+        }
+        .box {
+            border: 2px dashed black;
+            padding: 15px;
+            margin-top: 50px;
+            background-color: yellow;
+            display: grid;
+            gap: 20px;
+        }
+        .card {
+            display: grid;
+            grid-template-columns: 20% 80%;
+            background-color: aliceblue;
+            border: 2px solid black;
+            padding: 10px;
+        }
+        .card>div:nth-of-type(1) {
+            background-color:#1e90ff;
+        }
+        .card>div:nth-of-type(2) {
+            margin-left: 10px;
+            display: grid;
+            gap: 10px;
+        }
+        .card>div:nth-of-type(2)>p {
+            border: 2px dashed black;
+            padding: 5px;
+        }
+        .card>div:nth-of-type(2)>p:nth-of-type(1){
+            font-weight: 700;
+        }
+        @media (400px <= width <= 700px) {
+         .box {
+            display: grid;
+            grid-template-columns: repeat(2 , 1fr);
+         }
+}
+    </style>
+</head>
+<body>
+    <main>
+        <section class="box con2">
+            <div class="card">
+                <div>Image</div>
+                <div>
+                    <p>Title</p>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque autem omnis non aliquam aut, tempora cumque corrupti, blanditiis illum perferendis, in suscipit nemo? Adipisci beatae dolore laudantium cupiditate </p>
+                    <p><a href="">Read more</a></p>
+                </div>
+            </div>
+            <div class="card">
+                <div>Image</div>
+                <div>
+                    <p>Title</p>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque autem omnis non aliquam aut, tempora cumque corrupti, blanditiis illum perferendis, in suscipit nemo? Adipisci beatae dolore laudantium cupiditate </p>
+                    <p><a href="">Read more</a></p>
+                </div>
+            </div><div class="card">
+                <div>Image</div>
+                <div>
+                    <p>Title</p>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque autem omnis non aliquam aut, tempora cumque corrupti, blanditiis illum perferendis, in suscipit nemo? Adipisci beatae dolore laudantium cupiditate </p>
+                    <p><a href="">Read more</a></p>
+                </div>
+            </div><div class="card">
+                <div>Image</div>
+                <div>
+                    <p>Title</p>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque autem omnis non aliquam aut, tempora cumque corrupti, blanditiis illum perferendis, in suscipit nemo? Adipisci beatae dolore laudantium cupiditate </p>
+                    <p><a href="">Read more</a></p>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
