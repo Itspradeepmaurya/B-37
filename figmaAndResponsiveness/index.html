@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Figma & Responsivenes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/91a6d2fe0f.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: ;
+      }
+      .con2 {
+        max-width: 1440px;
+        margin: auto;
+      }
+      header > nav {
+        width: 1440px;
+        height: 88px;
+        display: flex;
+        position: absolute;
+      }
+      header > nav > div > img {
+        width: 114px;
+        height: 40px;
+        position: relative;
+        top: 24px;
+        left: 40px;
+      }
+      header > nav > div:nth-of-type(3) {
+        width: 676px;
+        height: 40px;
+        top: 24px;
+        left: 670px;
+        position: absolute;
+      }
+      header > nav > div:nth-of-type(3) > a {
+        width: 90px;
+        height: 40px;
+        padding: 8px 16px 8px 16px;
+        gap: 8px;
+        color: black;
+        text-decoration: none;
+      }
+      header > nav > div > button {
+        width: 82px;
+        height: 48px;
+        position: absolute;
+        top: 20px;
+        left: 1278px;
+        padding: 12px 16px 12px 16px;
+        gap: 10px;
+        border-radius: 8px;
+        border: 1px;
+        background-color: #fff;
+        border: 1px solid #ed0331;
+        color: #ed0331;
+      }
+      .hire {
+        width: 1440px;
+        height: 308px;
+        top: 88px;
+        position: absolute;
+        padding: 130px 80px 24px 80px;
+    
+      }
+      .hire > h1 {
+        width: 1280px;
+        height: 62px;
+        position: absolute;
+        top: 130px;
+        left: 80px;
+        font-family: Poppins;
+        font-size: 48px;
+        font-weight: 800;
+        line-height: 62px;
+        text-align: center;
+        color: #0a0103;
+      }
+      .hire > p {
+        width: 980px;
+        height: 68px;
+        position: absolute;
+        top: 216px;
+        left: 230px;
+        font-family: Open Sans;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 34px;
+        text-align: center;
+        color: #21191b;
+      }
+      .find {
+        display: flex;
+        width: 1440px;
+        height: 776px;
+        position: absolute;
+        top: 381px;
+      
+      }
+      .best > h2 {
+        width: 584px;
+        height: 80px;
+        top: 178px;
+        left: 189px;
+        color: #0a0103;
+        font-family: Poppins;
+        font-size: 34px;
+        font-weight: 700;
+        line-height: 40px;
+        text-align: left;
+        position: absolute;
+      }
+      .best > div {
+        width: 498px;
+        height: 272px;
+        position: absolute;
+        top: 283px;
+        left: 189px;
+        color: #544d4f;
+        display: grid;
+      }
+      .learn {
+        width: 515px;
+        height: 685px;
+        top: 48px;
+        left: 845px;
+        position: absolute;
+        border-radius: 16px;
+        box-shadow: 0px 4px 6px -2px #0000000d;
+        box-shadow: 0px 10px 15px -3px #0000001a;
+        box-shadow: 0px -2px 11px -2px #0000001a;
+      }
+      .learn > form > h2 {
+        width: 451px;
+        height: 28px;
+        position: absolute;
+        top: 23px;
+        left: 32px;
+        font-family: Poppins;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 28px;
+        text-align: center;
+        color: #0a0103;
+      }
+      .learn > form > div > div > p:nth-of-type(1) {
+        font-family: Open Sans;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 24px;
+        text-align: left;
+        color: #21191b;
+      }
+      .learn > form > div > div > p:nth-of-type(2) {
+        width: 451px;
+        height: 48px;
+        padding: 12px;
+        gap: 8px;
+        border-radius: 8px;
+        border: 1px solid #cccccc;
+      }
+      .learn > form > div > div > p:nth-of-type(2) > input {
+        width: 427px;
+        height: 24px;
+        gap: 8px;
+        padding: 12px;
+        border: none;
+        outline: none;
+        box-shadow: none;
+      }
+      .learn > form > div > div:nth-of-type(1) {
+        width: 451px;
+        height: 78px;
+        position: absolute;
+        top: 67px;
+        left: 32px;
+        margin-top: 16px;
+      }
+      .learn > form > div > div:nth-of-type(2) {
+        width: 451px;
+        height: 78px;
+        position: absolute;
+        top: 159px;
+        left: 32px;
+      }
+      .learn > form > div > div:nth-of-type(3) {
+        position: absolute;
+        width: 451px;
+        height: 78px;
+        top: 251px;
+        left: 32px;
+      }
+      .learn > form > div > div:nth-of-type(4) {
+        position: absolute;
+        width: 451px;
+        height: 78px;
+        top: 343px;
+        left: 32px;
+      }
+      .learn > form > div > div:nth-of-type(5) {
+        position: absolute;
+        width: 451px;
+        height: 78px;
+        top: 435px;
+        left: 32px;
+      }
+      .robot {
+        width: 201px;
+        height: 68px;
+        top: 527px;
+        left: 161px;
+        padding: 22px 21px 22px 21px;
+        gap: 26px;
+        border-radius: 10px;
+        border: 1px solid #cecccd;
+        position: absolute;
+      }
+      .robot > input,
+      .robot > label {
+        font-family: Open Sans;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 24px;
+        text-align: left;
+        color: black;
+      }
+
+      .learn > form > div > button {
+        width: 451px;
+        height: 48px;
+        top: 611px;
+        left: 32px;
+        padding: 12px 16px 12px 16px;
+        gap: 10px;
+        border-radius: 8px;
+        background-color: #ed0331;
+        position: absolute;
+        color: #fff;
+      }
+      .here {
+        width: 1440px;
+        height: 406px;
+        top: 1157px;
+        padding: 48px 80px 48px 80px;
+        gap: 55px;
+        position: absolute;
+       
+      }
+      .here > h1 {
+        width: 921px;
+        height: 40px;
+        color: #0a0103;
+        font-family: Poppins;
+        font-size: 34px;
+        font-weight: 700;
+        line-height: 40px;
+        text-align: left;
+        position: absolute;
+        top: 60px;
+        left: 259.5px;
+        right: 259.5px;
+        bottom: 306px;
+      }
+      .here > p {
+        width: 402px;
+        height: 40px;
+        position: absolute;
+        top: 155px;
+        bottom: 211px;
+        left: 519px;
+        right: 519px;
+        display: flex;
+        gap: 24px;
+      }
+      .here > p > span {
+        width: 146px;
+        height: 40px;
+        top: 155px;
+        left: 519px;
+        padding: 8px 16px 8px 16px;
+        gap: 10px;
+        font-family: Open Sans;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 24px;
+        letter-spacing: 1.25px;
+        text-align: left;
+        color: #0a0103;
+      }
+      .here > div {
+        width: 700px;
+        height: 96px;
+        position: absolute;
+        top: 250px;
+        bottom: 60px;
+        left: 370px;
+        right: 370px;
+      }
+      .here > div > span {
+        width: 104px;
+        height: 40px;
+        padding: 8px 12px 8px 12px;
+        display: ;
+        gap: 20px;
+        border-radius: 8px;
+        background-color: #f7f7ff;
+        font-family: Poppins;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 54px;
+        text-align: left;
+        color: #6e71cc;
+        margin-inline: 3px;
+      }
+      .why {
+        width: 1422px;
+        height: 607px;
+        position: absolute;
+        top: 1563px;
+        padding: 30px 75px 30px 75px;
+        gap: 44px;
+      }
+      .why > h1 {
+        width: 551px;
+        height: 39px;
+        font-family: Poppins;
+        font-size: 34px;
+        font-weight: 700;
+        line-height: 40px;
+        text-align: center;
+        color: #0a0103;
+        position: absolute;
+        top: 43px;
+        left: 435.5px;
+        right: 435.5px;
+        bottom: 525px;
+      }
+      .why > div {
+        width: 1272px;
+        height: 339px;
+        padding: 79.5px 24px 98.5px 42px;
+        position: absolute;
+        border-radius: 32px;
+        top: 126px;
+        left: 75px;
+        right: 75px;
+        bottom: 142px;
+        display: flex;
+        background-color: #f6ede7;
+      }
+      .card {
+        width: 161px;
+        height: 161px;
+        margin-top: 0.5px;
+        margin-left: 40px;
+        padding: 32px 13px 13px 13px;
+        border-radius: 32px;
+        border: 1px solid #f6ede7;
+        position: relative;
+        background-color: #fff;
+      }
+      .card > div {
+        width: 56px;
+        height: 56px;
+        position: absolute;
+        top: 32px;
+        left: 53px;
+        padding: 14px;
+        background-color: #f6ede7;
+        border-radius: 16px;
+      }
+      .card > p {
+        width: 135px;
+        height: 48px;
+        position: absolute;
+        top: 100px;
+        left: 13px;
+        font-family: Open Sans;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 24px;
+        text-align: center;
+        color: #6c6768;
+      }
+      .why > button {
+        width: 254px;
+        height: 55px;
+        padding: 16px 24px 16px 24px;
+        gap: 10px;
+        border-radius: 8px;
+        background-color: #ed0331;
+        font-family: Open Sans;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 24px;
+        text-align: center;
+        color: #ffffff;
+        position: absolute;
+        left: 591.5px;
+        bottom: 43px;
+      }
+      footer > section.foot {
+        width: 1440px;
+        height: 392px;
+        top: 2169px;
+        position: absolute;
+        background-color: #0a0103;
+        color: white;
+      }
+      .upperfoot {
+        width: 1280px;
+        height: 80px;
+        top: 2px;
+        left: 80px;
+        box-shadow: 0px 1px 0px 0px #f3f2f233;
+        position: absolute;
+        display: flex;
+      }
+      .upperfoot > div > img {
+        width: 114px;
+        height: 40px;
+        top: 20px;
+        left: 9px;
+        position: absolute;
+      }
+      .upperfoot > div:nth-of-type(2) {
+        width: 400px;
+        height: 24px;
+        top: 28px;
+        left: 858px;
+        position: absolute;
+        font-family: Open Sans;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        text-align: right;
+        color: #9d999a;
+        display: flex;
+        gap: 35px;
+      }
+      .lowerleftfoot {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        width: 826px;
+        height: 144px;
+        top: 122px;
+        left: 80px;
+        gap: 32px;
+        position: absolute;
+      }
+      .lowerleftfoot > div {
+        width: 254px;
+        height: 144px;
+        gap: 16px;
+        display: grid;
+        font-family: Open Sans;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        text-align: left;
+        columns: #cecccd;
+      }
+      .lowerrightfoot > div:nth-of-type(1) {
+        width: 147px;
+        height: 48px;
+        top: 122px;
+        left: 978px;
+        font-family: Open Sans;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 24px;
+        text-align: left;
+        position: absolute;
+      }
+      .city {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+      }
+      .city > div:nth-of-type(1) > div > img,
+      .city > div:nth-of-type(2) > div > img,
+      .city > div:nth-of-type(3) > div > img,
+      .city > div:nth-of-type(4) > div > img {
+        width: 72px;
+        height: 72px;
+        padding: 15.28px 19.07px 15.71px 19.1px;
+        border-radius: 24px;
+        position: absolute;
+        box-shadow: 0px 0px 19.1px -2.18px #00000021;
+        background: #21191b;
+        top: 185px;
+        left: 976px;
+      }
+
+      .city > div:nth-of-type(1) > p,
+      .city > div:nth-of-type(2) > p,
+      .city > div:nth-of-type(3) > p,
+      .city > div:nth-of-type(4) > p {
+        width: 67px;
+        height: 22px;
+        position: absolute;
+        top: 262px;
+        left: 979px;
+        font-family: Open Sans;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 22px;
+        text-align: center;
+        color: #ffffff;
+      }
+      .city > div:nth-of-type(2) > div > img,
+      .city > div:nth-of-type(2) > p {
+        position: absolute;
+        left: 1080px;
+      }
+      .city > div:nth-of-type(3) > div > img,
+      .city > div:nth-of-type(3) > p {
+        position: absolute;
+        left: 1184px;
+      }
+      .city > div:nth-of-type(4) > div > img,
+      .city > div:nth-of-type(4) > p {
+        position: absolute;
+        left: 1288px;
+      }
+      @media (width > 375px) {
+        .banner,
+        .menuu {
+          display: none;
+        }
+      }
+      @media (width <= 375px) {
+        body {
+          height: auto;
+        }
+        .banner {
+          width: 375px;
+          height: 35px;
+        }
+        .menuu > i {
+          width: 18px;
+          height: 12px;
+          top: 28px;
+          left: 43px;
+          font-size: 30px;
+          position: absolute;
+        }
+        .navibar {
+          display: none;
+        }
+        nav > div:nth-of-type(2) > img {
+          width: 200.67px;
+          height: 70px;
+          top: 8px;
+          left: 634px;
+          position: absolute;
+        }
+        .find {
+          height: 1200px;
+        }
+        .best > h2 {
+        width: 884px;
+        left: 89px;
+      }
+        .best {
+          grid-area: a1;
+          width: 1247px;
+          height: 265px;
+          top: -100px;
+          left: 305px;
+          position: absolute;
+          font-size: 25px;
+        }
+        .learn {
+          grid-area: a2;
+          width: 643px;
+          height: 740px;
+          top: 518px;
+          left: 400px;
+          padding: 57px 37px 57px 37px;
+          gap: 16px;
+          position: absolute;
+          font-size: 30px;
+        }
+        .learn > form > div > button {
+          position: absolute;
+          top: 610px;
+          width: 200px;
+          left: 170px;
+        }
+        .here {
+          width: 343px;
+          height: 566px;
+          top: 1601px;
+          left: 60px;
+          padding: 57px 37px 57px 37px;
+          gap: 16px;
+          position: absolute;
+          border: none;
+        }
+        .why {
+          width: 375px;
+          height: 684px;
+          top: 1959px;
+          gap: 0px;
+          border-radius: 30px 30px 0px 0px;
+          position: absolute;
+          border: none;
+        }
+        .why > div {
+          display: grid;
+          width: 600px;
+          height: 1100px;
+          gap: 5px;
+          place-content: center;
+          position: absolute;
+          left: 400px;
+        }
+        .card {
+          width: 300px;
+          height: 165px;
+        }
+        .why > button {
+          position: absolute;
+          top: 1300px;
+        }
+        footer {
+          width: 375px;
+          height: 526px;
+          top: 1243px;
+          position: absolute;
+        }
+        .upperfoot > div > img {
+          display: none;
+        }
+        .city {
+          display: none;
+        }
+        
+        .lowerleftfoot {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          grid-area: a1;
+        }
+        .upperfoot > div:nth-of-type(2) {
+            position: absolute;
+            left: 300px;
+            display: flex;
+            gap: 100px;
+            grid-area: a3;
+        }
+        .lowerrightfoot {
+            display: grid;
+        }
+        .lowerrightfoot > div:nth-of-type(1) {
+            display:flex;
+            width: 500px;
+            grid-area: a2;
+        }
+        footer > section.foot{
+     grid-template-areas: "a2 a2"
+                          "a1 a1"
+                          "a3 a3";
+}
+      }
+    </style>
+  </head>
+  <body>
+    <header class="con2">
+      <div class="banner"></div>
+      <nav>
+        <div class="menuu"><i class="fa-solid fa-bars"></i></div>
+        <div><img src="./MasaiLogo-dark-web.png" alt="image" /></div>
+        <div class="navibar">
+          <a href="#">COURSES V</a>
+          <a href="#">FEES</a>
+          <a href="#">ABOUT US</a>
+          <a href="#">EVENTS</a>
+          <a href="#">CONTESTS</a>
+          <a href="#">FAQ</a>
+        </div>
+        <div>
+          <button>LOGIN</button>
+        </div>
+      </nav>
+    </header>
+    <main class="con2">
+      <section class="hire">
+        <h1>Hire Masai graduates</h1>
+        <p>
+          Become a part of the top companies in technology that already hired
+          our graduates for their engineering teams.
+        </p>
+      </section>
+      <section class="find">
+        <div class="best">
+          <h2>Find your best fit in our graduates</h2>
+          <div>
+            <p>Lay down your talent requirements with us</p>
+            <p>Choose from the pool of our graduates</p>
+            <p>Review profile and portfolio</p>
+            <p>Hire the candidate best-suited for your team</p>
+          </div>
+        </div>
+        <div class="learn">
+          <form action="#">
+            <h2>Learn more about hiring</h2>
+            <div>
+              <div>
+                <p><label for="name">Full name</label></p>
+                <p>
+                  <input
+                    type="text"
+                    name="name"
+                    id="name"
+                    placeholder="Enter your full name"
+                  />
+                </p>
+              </div>
+              <div>
+                <p><label for="mail">Work E-mail</label></p>
+                <p>
+                  <input
+                    type="email"
+                    name="mail"
+                    id="mail"
+                    placeholder="Enter email"
+                  />
+                </p>
+              </div>
+              <div>
+                <p><label for="phone">Business phone</label></p>
+                <p>
+                  <input
+                    type="tel"
+                    name="phone"
+                    id="phone"
+                    placeholder="Enter phone number"
+                  />
+                </p>
+              </div>
+              <div>
+                <p><label for="Designation">Designation</label></p>
+                <p>
+                  <input
+                    type="text"
+                    name="Designation"
+                    id="Designation"
+                    placeholder="Eg. HR head"
+                  />
+                </p>
+              </div>
+              <div>
+                <p><label for="Company">Company</label></p>
+                <p>
+                  <input
+                    type="text"
+                    name="Company"
+                    id="Company"
+                    placeholder="Enter comapny name"
+                  />
+                </p>
+              </div>
+            </div>
+            <div class="robot">
+              <input type="radio" name="robo" id="robo" />
+              <label for="robo">I'm not a robot</label>
+            </div>
+            <div><button type="button">Submit</button></div>
+          </form>
+        </div>
+      </section>
+      <section class="here">
+        <h1>Here are some of the job roles we can assist you with</h1>
+        <p>
+          <span>DEVELOPMENT</span>
+          <span style="box-shadow: 0px 2px 0px 0px #ed0331">DESIGN</span>
+          <span>ANALYTICS</span>
+        </p>
+        <div>
+          <span>UI Designer </span>
+          <span>Product Designer</span>
+          <span>UI UX Designer</span>
+          <span>UX Researcher</span>
+          <span> Visual Designer</span>
+          <span>Interaction Designer</span>
+          <span>Motion Designer</span>
+          <span>UX Designer</span>
+        </div>
+      </section>
+      <section class="why">
+        <h1>Why hire from us?</h1>
+        <div class="box">
+          <div class="card">
+            <div><img src="./code.png" alt="image" /></div>
+            <p>1200+ hours of coding experience</p>
+          </div>
+          <div class="card">
+            <div><img src="./Vector.png" alt="image" /></div>
+            <p>1200+ hours of coding experience</p>
+          </div>
+          <div class="card">
+            <div><img src="./Vector (1).png" alt="image" /></div>
+            <p>1200+ hours of coding experience</p>
+          </div>
+          <div class="card">
+            <div><img src="./Vector (2).png" alt="image" /></div>
+            <p>1200+ hours of coding experience</p>
+          </div>
+          <div class="card">
+            <div><img src="./Vector (3).png" alt="image" /></div>
+            <p>1200+ hours of coding experience</p>
+          </div>
+          <div class="card">
+            <div><img src="./Vector (4).png" alt="image" /></div>
+            <p>1200+ hours of coding experience</p>
+          </div>
+        </div>
+        <button type="button">APPLY NOW FOR FREE</button>
+      </section>
+    </main>
+      <footer class="con2">
+        <section class="foot">
+          <div class="upperfoot">
+            <div>
+              <img src="./MasaiLogo-light-web.png" alt="image" />
+            </div>
+            <div>
+              <span>Follow us -</span>
+              <span><i class="fa-brands fa-twitter"></i></span>
+              <span><i class="fa-brands fa-facebook"></i></span>
+              <span><i class="fa-brands fa-linkedin"></i></span>
+              <span><i class="fa-brands fa-instagram"></i></span>
+              <span><i class="fa-brands fa-github"></i></span>
+              <span><i class="fa-brands fa-youtube"></i></span>
+            </div>
+          </div>
+          <div class="lowerfoot">
+            <div class="lowerleftfoot">
+              <p>Masai Alumni</p>
+              <p>Glide Program</p>
+              <p>Testimonials</p>
+              <p>Masai Referal Program</p>
+
+              <p>Hire from us</p>
+              <p>Investors</p>
+              <p>News</p>
+              <p>Masai Blog</p>
+
+              <p>Masai Team</p>
+              <p>We are Hiring!</p>
+              <p>Become Industry Mentor</p>
+              <p>Contact Us</p>
+            </div>
+            <div class="lowerrightfoot">
+              <div>
+                <p>Masai School</p>
+                <p><span style="color: #ed0331">#Offline</span> Campuses</p>
+              </div>
+
+              <div class="city">
+                <div>
+                  <div><img src="./Frame 494.png" alt="image" /></div>
+                  <p>Banglore</p>
+                </div>
+                <div>
+                  <div><img src="./Frame 495.png" alt="image" /></div>
+                  <p>Pune</p>
+                </div>
+                <div>
+                  <div><img src="./Frame 496.png" alt="image" /></div>
+                  <p>Patna</p>
+                </div>
+                <div>
+                  <div><img src="./Frame 497.png" alt="image" /></div>
+                  <p>indore</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </footer>
+    
+  </body>
+</html>
