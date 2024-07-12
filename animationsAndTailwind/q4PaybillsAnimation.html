@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/91a6d2fe0f.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            background-color: rgb(255,198,61);
+
+        }
+        body > div.container {
+          
+            display: grid;
+            grid-template-columns: 40% 60%;
+            place-items: center;
+            padding: 200px;
+            font-weight: bolder;
+            font-size: 30px;
+        }
+        #bill {
+            position: relative;
+            top: 150px;
+        }
+        @keyframes moveright {
+            0% {
+                 transform: translateX(-400px);
+                 color: white;
+            }
+            100% {
+              transform: translateX(0px);
+            }
+        }
+        .container>div#bill {
+            animation:moveright 2s ease-in-out infinite ;
+        }
+        #icon {
+            position: absolute;
+          
+            width: 400px;
+            height: 400px;
+            top: 200px;
+            left: 800px;
+            animation: glide 6s infinite;
+        }
+        #icon>div>i {
+            
+            padding: 10px;
+            border-radius: 50%;
+            background-color: rgb(254, 214, 121);
+            border: none;
+            position: absolute;
+            top: 150px;
+            left: 150px;
+            
+    
+        }
+       
+        #icon>div:nth-child(1){
+            transform: translate(-150px, 0px);
+        }
+        #icon>div:nth-child(2){
+            transform: translate(-110px,-110px);
+        }
+        #icon>div:nth-child(3) {
+           transform: translate(0px, -150px)
+        }
+        #icon>div:nth-child(4) {
+           transform: translate(110px, -110px)
+        }
+        #icon>div:nth-child(5) {
+           transform: translate(150px, 0px)
+        }
+        #icon>div:nth-child(6) {
+           transform: translate(110px, 110px)
+        }
+        #icon>div:nth-child(7) {
+           transform: translate(0px, 150px)
+        }
+        #icon>div:nth-child(8) {
+           transform: translate(-110px, 110px)
+        }
+        @keyframes glide {
+            0%{
+            transform: rotate(180deg);
+            }
+            50% {
+              transform: rotate(360deg);
+            }
+            100% {
+              transform: rotate(540deg);
+            }
+        }
+       
+       
+    </style>
+  </head>
+  <body>
+    <div class="container">
+        <div id="bill">Pay bills instantly</div>
+        <div id="icon">
+          <div><i class="fa-brands fa-twitter"></i></div>
+          <div><i class="fa-brands fa-facebook"></i></div>
+          <div><i class="fa-brands fa-youtube"></i></div>
+          <div><i class="fa-regular fa-lightbulb"></i></div>
+          <div><i class="fa-solid fa-camera"></i></div>
+          <div><i class="fa-solid fa-house"></i></div>
+          <div><i class="fa-solid fa-phone"></i></div>
+          <div><i class="fa-solid fa-laptop"></i></div>
+        </div>
+    </div>
+   
+  </body>
+</html>

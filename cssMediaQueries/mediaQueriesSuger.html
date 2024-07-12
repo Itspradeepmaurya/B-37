@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sugar</title>
+    <script
+      src="https://kit.fontawesome.com/91a6d2fe0f.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: sans-serif;
+      }
+      main {
+        background-color: rgb(242, 242, 242);
+        width: 100vw;
+        height: auto;
+      }
+      main > :nth-child(1) {
+        text-align: center;
+        padding: 30px 0px 20px 0px;
+      }
+      main > :nth-child(1) > fieldset {
+        border: 3px solid rgb(252, 39, 121);
+        border-bottom: None;
+        border-inline: None;
+        margin-inline: 20%;
+        font-weight: bolder;
+        font-size: 25px;
+      }
+      main > :nth-child(1) > fieldset > legend {
+        padding-inline: 20px;
+      }
+      main > :nth-child(2) {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
+      
+      }
+      main > :nth-child(2) > div {
+        border: 2px;
+        background-color: rgb(255, 255, 255);
+        margin: 20px 20px;
+        padding: 20px 10px;
+        border-radius: 15px;
+      }
+      main > :nth-child(2) > div > div > img {
+        width: 90%;
+        height: 18em;
+        border-radius: 15px;
+      }
+      main > :nth-child(2) > div > div {
+        display: flex;
+        justify-content: flex-end;
+        grid-template-columns: 90% 10%;
+        place-items: center;
+      }
+      main > :nth-child(2) > div > div:active + .coupon {
+          display: block;
+          padding-left: 50%;
+          
+      }
+      main > :nth-child(2) > div > div > div {
+        border: 2px solid;
+        background-color: rgb(254, 233, 241);
+        border: 2px dotted rgb(253, 126, 175);
+        padding: 10px 10px;
+    
+      }
+      main > :nth-child(2) > div > div > div:nth-child(1) {
+        color: rgb(252, 43, 123);
+        border-right: None;
+        font-weight: bolder;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+      }
+      main > :nth-child(2) > div > div > div:nth-child(2) {
+        border-bottom-right-radius: 10px;
+        border-top-right-radius: 10px;
+      }
+      main > :nth-child(2) > div > :nth-child(3) {
+        color: green;
+        display: None;
+        transition:  5s ;
+      }
+      @media (max-width:1024px) {
+        main > :nth-child(1) > fieldset {
+          margin-inline: 20%;
+          font-size: 20px;
+        }
+        main > :nth-child(2) {
+          grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
+        }
+      }
+      @media (max-width : 768px) {
+        main > :nth-child(1) > fieldset {
+          margin-inline: 10%;
+          font-size: 18px;
+        }
+        main > :nth-child(2) {
+          grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+        }
+        main > :nth-child(2) > div > div {
+  
+        align-items: center;
+      }
+      main > :nth-child(2) > div > div > img {
+        width: 100%;
+        height: auto;
+      }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div>
+        <fieldset><legend>OFFERS</legend></fieldset>
+      </div>
+      <div>
+        <div>
+          <div>
+            <img
+              src="https://d32baadbbpueqt.cloudfront.net/Promotion/acad85ca-903b-44f2-b504-a70a3e0c8325.jpg"
+              alt=""
+            />
+          </div>
+          <div>
+            <div>PAYDAY300</div>
+            <div><i class="fa-regular fa-copy"></i></div>
+          </div>
+          <div class="coupon"><i class="fa-solid fa-circle-check"></i>COUPON COPIED</div>
+        </div>
+        <div>
+          <div>
+            <img
+              src="https://d32baadbbpueqt.cloudfront.net/Promotion/f10eef9d-2da4-4b1f-9302-12fa9d027d1b.jpg"
+              alt=""
+            />
+          </div>
+          <div>
+            <div>PLAY10</div>
+            <div><i class="fa-regular fa-copy"></i></div>
+          </div>
+          <div class="coupon"><i class="fa-solid fa-circle-check"></i>COUPON COPIED</div>
+        </div>
+        <div>
+          <div>
+            <img
+              src="https://d32baadbbpueqt.cloudfront.net/Promotion/37e132aa-becc-4ad1-a744-64b6adc5ad3c.jpg"
+              alt=""
+            />
+          </div>
+          <div>
+            <div>MUSE5</div>
+            <div><i class="fa-regular fa-copy"></i></div>
+          </div>
+          <div class="coupon"><i class="fa-solid fa-circle-check"></i>COUPON COPIED</div>
+        </div>
+        <div>
+          <div>
+            <img
+              src="https://d32baadbbpueqt.cloudfront.net/Promotion/ce5b8ab8-2b0c-4b21-abf7-7ce0d4a754dc.jpg"
+              alt=""
+            />
+          </div>
+          <div>
+            <div>TREAT1499</div>
+            <div><i class="fa-regular fa-copy"></i></div>
+          </div>
+          <div class="coupon"><i class="fa-solid fa-circle-check"></i>COUPON COPIED</div>
+        </div>
+        <div>
+          <div>
+            <img
+              src="https://d32baadbbpueqt.cloudfront.net/Promotion/8adc6909-ac53-4df0-8a3e-50b0f5473586.jpg"
+              alt=""
+            />
+          </div>
+          <div>
+            <div>MAKEUPBOX1799</div>
+            <div><i class="fa-regular fa-copy"></i></div>
+          </div>
+          <div class="coupon"><i class="fa-solid fa-circle-check"></i>COUPON COPIED</div>
+        </div>
+        <div>
+          <div>
+            <img
+              src="https://d32baadbbpueqt.cloudfront.net/Promotion/7ab87166-d2f5-43e7-8b1f-2a53d19f25e5.jpg"
+              alt=""
+            />
+          </div>
+          <div>
+            <div>TREAT799</div>
+            <div><i class="fa-regular fa-copy"></i></div>
+          </div>
+          <div class="coupon"><i class="fa-solid fa-circle-check"></i>COUPON COPIED</div>
+        </div>
+        <div>
+          <div>
+            <img
+              src="https://d32baadbbpueqt.cloudfront.net/Promotion/94ebecb4-f8ab-4b9e-8a87-3334735c64a3.jpg"
+              alt=""
+            />
+          </div>
+          <div>
+            <div>TREAT899</div>
+            <div><i class="fa-regular fa-copy"></i></div>
+          </div>
+          <div class="coupon"><i class="fa-solid fa-circle-check"></i>COUPON COPIED</div>
+        </div>
+        <div>
+          <div>
+            <img
+              src="https://d32baadbbpueqt.cloudfront.net/Promotion/acad85ca-903b-44f2-b504-a70a3e0c8325.jpg"
+              alt=""
+            />
+          </div>
+          <div>
+            <div>PLAYDAY300</div>
+            <div><i class="fa-regular fa-copy"></i></div>
+          </div>
+          <div class="coupon"><i class="fa-solid fa-circle-check"></i>COUPON COPIED</div>
+        </div>
+        <div>
+          <div>
+            <img
+              src="https://d32baadbbpueqt.cloudfront.net/Promotion/f10eef9d-2da4-4b1f-9302-12fa9d027d1b.jpg"
+              alt=""
+            />
+          </div>
+          <div>
+            <div>PLAY10</div>
+            <div><i class="fa-regular fa-copy"></i></div>
+          </div>
+          <div class="coupon"><i class="fa-solid fa-circle-check"></i>COUPON COPIED</div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

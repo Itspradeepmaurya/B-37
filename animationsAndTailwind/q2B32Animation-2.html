@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      .container {
+        width: 100vw;
+        height: 100vh;
+      }
+      .container > div {
+        background: linear-gradient(
+          to right in hsl increasing hue,
+          hsl(261, 97%, 53%),
+          hsl(191, 0%, 55%)
+        );
+        color: white;
+        border: 2px;
+        border-radius: 30px;
+        width: 50%;
+        height: 20%;
+        display: grid;
+        place-items: center;
+        margin: 10px 0px;
+      }
+       @keyframes left {
+        0% {
+          transform : translatex(-800px)
+        }
+        
+       }
+       
+      .container > div.boxleft {
+        animation: left 2s ease forwards;
+        
+      }
+      @keyframes right {
+        0% {
+          transform : translatex(800px)
+        }
+        
+       } 
+      .container > div.boxright {
+        position: relative;
+        left: 50%;
+        animation: right 2s ease forwards;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="boxleft">Box-1</div>
+      <div class="boxright">Box-2</div>
+      <div class="boxleft">Box-3</div>
+      <div class="boxright">Box-4</div>
+    </div>
+  </body>
+</html>

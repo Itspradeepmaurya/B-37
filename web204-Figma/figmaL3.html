@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://kit.fontawesome.com/91a6d2fe0f.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body {
+        width: 100%;
+        height: auto;
+        color: #0d0d1c;
+      }
+      .container1 {
+        max-width: 1280px;
+        margin: auto;
+      }
+      #navbar {
+        width: 1, 280px;
+        height: Fixed (65px) px;
+        padding: 12px 40px 12px 40px;
+        border: 0px 0px 1px 0px;
+        justify-content: space-between;
+        border-bottom: 1px solid #e5e8eb;
+        display: flex;
+      }
+      #navbar > div > span > img {
+        width: 16px;
+        height: 16px;
+        color: #0d0d1c;
+      }
+      #navbar > div:nth-of-type(1) > span:nth-of-type(2) {
+        width: 126.98px;
+        height: 22.5px;
+        font-family: Space Grotesk;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 22.5px;
+        letter-spacing: -0.27000001072883606px;
+        text-align: left;
+        color: #0d0d1c;
+      }
+      #navbar > div:nth-of-type(2) {
+        width: 1, 041.02px;
+        height: Fixed (40px) px;
+        gap: 32px;
+        display: flex;
+      }
+      #navbar > div:nth-of-type(2) > span {
+        width: Fixed (291.86px) px;
+        height: Fixed (40px) px;
+        gap: 36px;
+      }
+      #navbar > div:nth-of-type(2) > div > i {
+        width: 40px;
+        height: Fixed (40px) px;
+        padding: 10px 10px 10px 10px;
+        background: #e8e8f2;
+        border-radius: 25%;
+        margin-top: -5px;
+      }
+      .container {
+        max-width: 960px;
+        margin: auto;
+      }
+      #id1 {
+        width: Fixed (960px) px;
+        height: Fixed (412px) px;
+        display: flex;
+      }
+      #id1 > div:nth-of-type(1) > img {
+        margin: 40px 16px 40px 16px;
+      }
+      #id1 > div:nth-of-type(2) {
+        width: Fixed (464.05px) px;
+        height: Fixed (332px) px;
+        gap: 32px;
+        margin: 40px 16px 40px 16px;
+      }
+      #id1 > div:nth-of-type(2) > h1 {
+        width: Fixed (464.05px) px;
+        height: 180px;
+        font-family: Space Grotesk;
+        font-size: 48px;
+        line-height: 60px;
+        letter-spacing: -1.5839999914169312px;
+        text-align: left;
+        margin-bottom: 30px;
+      }
+      #id1 > div:nth-of-type(2) > p {
+        width: Fixed (464.05px) px;
+        height: Fixed (48px) px;
+        font-family: Space Grotesk;
+        margin-bottom: 30px;
+      }
+      #id1 > div:nth-of-type(2) > div {
+        width: Fixed (464.05px) px;
+        height: Fixed (64px) px;
+        padding: 10px 8px 10px 16px;
+        background-color: #e8e8f2;
+        border-radius: 10px;
+      }
+      #id1 > div:nth-of-type(2) > div > input {
+        background-color: #e8e8f2;
+        border: none;
+        width: 300px;
+      }
+      #id1 > div:nth-of-type(2) > div > button {
+        width: Fixed (137.98px) px;
+        height: Fixed (48px) px;
+        padding: 10px 20px 10px 20px;
+        background: #1a1ae5;
+        color: white;
+        border-radius: 10px;
+        border: none;
+      }
+      #id2 {
+        width: 960px;
+        height: 260.5px;
+        padding: 16px 15.66px 16px 16px;
+        gap: 12px;
+        display: grid;
+      }
+      #id2 > h1 {
+        width: 150.53px;
+        height: 27.5px;
+        font-family: Space Grotesk;
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 27.5px;
+        letter-spacing: -0.33000001311302185px;
+        text-align: left;
+        color: #0d0d1c;
+      }
+      #id2 > div {
+        display: flex;
+        justify-content: space-between;
+      }
+      #id3 {
+        width: Fixed (960px) px;
+        height: Fixed (245.5px) px;
+        padding: 20px 16px 12px 16px;
+      }
+      #id3 > h1 {
+        width: Fixed (960px) px;
+        height: Fixed (59.5px) px;
+        padding: 0px 16px 12px 16px;
+        font-family: Space Grotesk;
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 27.5px;
+        letter-spacing: -0.33000001311302185px;
+        text-align: left;
+        color: #0d0d1c;
+      }
+      #id3 > p {
+        font-family: Space Grotesk;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        text-align: left;
+        color: #0d0d1c;
+      }
+      #id4 {
+        width: Fixed (960px) px;
+        height: Fixed (320.5px) px;
+        padding: 20px 16px 12px 16px;
+      }
+      #id4 > h1 {
+        font-family: Space Grotesk;
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 27.5px;
+        letter-spacing: -0.33000001311302185px;
+        text-align: left;
+        color: #0d0d1c;
+        width: 119.03px;
+        height: 27.5px;
+      }
+      #id4 > div {
+        display: flex;
+        width: 960px;
+        height: 256px;
+        padding: 16px 0px 0px 0px;
+        gap: 12px;
+      }
+      #id4 > div > div > p {
+        font-family: Space Grotesk;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 24px;
+        text-align: left;
+      }
+      #id5 {
+        width: Fixed (960px) px;
+        height: 460px;
+        margin-bottom: 20px;
+        padding: 1px 1px 1px 1px;
+        display: grid;
+        grid-template-rows: 15% 20% 20% 30% 15%;
+      }
+      #id5 > div:nth-of-type(1) {
+        width: Fixed (960px) px;
+        height: Fixed (59.5px) px;
+        padding: 20px 16px 12px 16px;
+      }
+      #id5 > div:nth-of-type(1) > h1 {
+        width: 127.97px;
+        height: 27.5px;
+        font-family: Space Grotesk;
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 27.5px;
+        letter-spacing: -0.33000001311302185px;
+        text-align: left;
+        color: #0d0d1c;
+      }
+      #id5 > div:nth-of-type(2) {
+        width: Fixed (960px) px;
+        height: Fixed (80px) px;
+        padding: 12px 16px 12px 16px;
+      }
+      #id5 > div:nth-of-type(2) > input {
+        width: 480px;
+        height: 56px;
+        padding: 10px 10px 10px 10px;
+        justify: space-between;
+        color: rgb(232, 232, 242);
+        border: none;
+        font-family: space Grotesk;
+        border-radius: 10px;
+        background-color: rgb(232, 232, 242);
+      }
+      #id5 > div:nth-of-type(3) {
+        width: 960px;
+        height: 80px;
+        padding: 12px 16px 12px 16px;
+      }
+      #id5 > div:nth-of-type(3) > input {
+        width: 480px;
+        height: 56px;
+        padding: 16px 10px 10px 10px;
+        justify: space-between;
+        color: rgb(85, 85, 158);
+        border: none;
+        font-family: space Grotesk;
+        border-radius: 10px;
+        background-color: rgb(232, 232, 242);
+      }
+      #id5 > div:nth-of-type(4) {
+        width: 960px;
+        height: 168px;
+        padding: 12px 16px 12px 16px;
+      }
+      #id5 > div:nth-of-type(4) > textarea {
+        width: 480px;
+        height: 144px;
+        padding: 16px 10px 10px 10px;
+        justify: space-between;
+        border: none;
+        border-radius: 10px;
+        background-color: rgb(232, 232, 242);
+        font-family: space Grotesk;
+      }
+      #id5 > div:nth-of-type(5) {
+        width: 960px;
+        height: 64px;
+        padding: 12px 16px 12px 16px;
+      }
+      #id5 > div:nth-of-type(5) > button {
+        width: 84px;
+        height: 40px;
+        padding: 0px 16px 0px 16px;
+        border-radius: 10px;
+        border: none;
+        background-color: #1a1ae5;
+        color: white;
+        margin: 12px 10px 12px 850px;
+      }
+      @media (width < 780px) {
+        #navbar {
+          width: 900px;
+        }
+        #id1 > div:nth-of-type(2) {
+          display: grid;
+        }
+        #id1 > div:nth-of-type(2) > div {
+          display: flex;
+        }
+        #id1 > div:nth-of-type(2) > div > span {
+          padding-top: 17px;
+        }
+        #id3 > p {
+          width: 900px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header id="navbar" class="container1">
+      <div>
+        <span><img src="./Vector - 1.png" alt="" /></span>
+        <span>HCI Researcher</span>
+      </div>
+      <div>
+        <span>Work</span>
+        <span>About</span>
+        <span>Process</span>
+        <span>Contact</span>
+        <div><i class="fa-solid fa-magnifying-glass"></i></div>
+      </div>
+    </header>
+    <main class="container">
+      <section id="id1">
+        <div><img src="./Depth 6, Frame 0.png" alt="" /></div>
+        <div>
+          <h1>I'm a user experience researcher and designer</h1>
+          <p>
+            I work at the intersection of technology, design, and human behavior
+            to create intuitive, human-centered experiences.
+          </p>
+          <div>
+            <span><i class="fa-solid fa-magnifying-glass"></i></span>
+            <input type="text" placeholder=" Email address" />
+            <button>Get in touch</button>
+          </div>
+        </div>
+      </section>
+      <section id="id2">
+        <h1>Featured Work</h1>
+        <div>
+          <div><img src="./Depth 7, Frame 0.png" alt="" /></div>
+          <div><img src="./Depth 7, Frame 0 (1).png" alt="" /></div>
+          <div><img src="./Depth 7, Frame 3.png" alt="" /></div>
+        </div>
+      </section>
+      <section id="id3">
+        <h1>About Me</h1>
+        <p>
+          I'm a user experience researcher and designer. I'm currently a PhD
+          student in Human-Computer Interaction at Stanford University, where I
+          work with James Landay and other amazing people in the HCI Group. My
+          research focuses on understanding how people interact with AI systems,
+          with the goal of designing more transparent, trustworthy, and
+          equitable AI technologies. Before coming to Stanford, I worked as a UX
+          designer and researcher at various tech companies and startups,
+          including Google, Airbnb, and the MIT Media Lab. I'm also passionate
+          about diversity and inclusion in tech, and have led several
+          initiatives to promote equity and representation for underrepresented
+          groups in the industry.
+        </p>
+      </section>
+      <section id="id4">
+        <h1>My Process</h1>
+        <div>
+          <div>
+            <img src="./Depth 8, Frame 0.png" alt="" />
+            <p>Research</p>
+          </div>
+          <div>
+            <img src="./Depth 8, Frame 0 (1).png" alt="" />
+            <p>Design</p>
+          </div>
+          <div>
+            <img src="./Depth 8, Frame 0 (2).png" alt="" />
+            <p>Build</p>
+          </div>
+          <div>
+            <img src="./Depth 8, Frame 0 (3).png" alt="" />
+            <p>Test</p>
+          </div>
+          <div>
+            <img src="./Depth 8, Frame 0 (4).png" alt="" />
+            <p>Launch</p>
+          </div>
+        </div>
+      </section>
+      <section id="id5">
+        <div>
+          <h1>Get in Touch</h1>
+        </div>
+        <div>
+          <label for="name"></label>
+          <input type="text" placeholder="Name" name="name" />
+        </div>
+        <div>
+          <label for="email"></label>
+          <input type="text" placeholder="Email address" name="email" />
+        </div>
+        <div>
+          <label for=" message"></label>
+          <textarea name="message" id="" placeholder="Message"></textarea>
+        </div>
+        <div>
+          <button>Send</button>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

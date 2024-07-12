@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Footer - Responsive</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      footer {
+        display: grid;
+        grid-template-rows: repeat(auto-fill, minmax(400px, 1fr));
+      }
+      footer > div.upperfooter {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(35%, 1fr));
+      }
+      footer > div.upperfooter > div:nth-child(1) {
+        background-color: rgb(2, 2, 111);
+        height: 100%;
+        display: grid;
+        place-items: center;
+        /* grid-area: a1; */
+      }
+      footer > div.upperfooter > div:nth-child(1) > div.logo {
+        background-color: black;
+        height: 200px;
+        width: 200px;
+        padding-left: 30px;
+        padding-top: 20px;
+      }
+      footer > div.upperfooter > div:nth-child(1) > div.logo > img {
+        width: 80%;
+      }
+
+      footer > div.upperfooter > div:nth-child(1) > div.logo > div {
+        color: rgb(255, 119, 18);
+        font-size: 40px;
+      }
+      footer > div.upperfooter > div:nth-child(2) {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
+        background-color: rgb(49, 64, 175);
+        color: white;
+        width: 100%;
+        /* grid-area: a2; */
+      }
+      footer > div.upperfooter > div:nth-child(2) > div {
+        display: grid;
+        padding: 20px 20px;
+      }
+      footer > div.upperfooter > div:nth-child(2) > div > li:nth-child(1) {
+        font-weight: bolder;
+        font-size: larger;
+      }
+      footer > div.upperfooter > div:nth-child(2) > div > li {
+        list-style-type: none;
+      }
+      footer > div.lowerfooter {
+        background-color: black;
+        color: white;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
+        padding: 25px;
+        /* grid-area: a3; */
+      }
+      footer > div.lowerfooter > div:nth-child(1) {
+        display: grid;
+        grid-template-columns: 10% 10% 14% 10%;
+      }
+      footer > div.lowerfooter > div > div > img {
+        width: 60%;
+        border-radius: 50%;
+      }
+      footer > div.lowerfooter > div > div:nth-of-type(2) {
+        border-right: 2px solid white;
+      }
+      footer > div.lowerfooter > div > div:nth-of-type(3) {
+        border-right: 2px solid white;
+      }
+
+      footer > div.lowerfooter > div > div:nth-child(3),
+      :nth-child(4) {
+        padding-left: 10px;
+      }
+      footer > div.lowerfooter > div:nth-child(2) {
+        text-decoration: underline;
+      }
+      footer > div.lowerfooter > div:nth-child(2) > span {
+        padding-inline: 15px;
+      }
+      @media (max-width: 768px) {
+        footer > div.upperfooter {
+          display: flex;
+          flex-direction: column-reverse;
+        }
+        footer > div.upperfooter > div:nth-child(2) {
+          display: flex;
+          justify-content: space-around;
+          font-size: small;
+        }
+        footer > div.upperfooter > div:nth-child(1) > div.logo {
+          height: 160px;
+          width: 150px;
+          padding-left: 30px;
+          padding-top: 20px;
+        }
+        footer > div.lowerfooter > div:nth-child(1) {
+          display: none;
+        }
+        footer > div.lowerfooter > div:nth-child(2) {
+          display: flex;
+          font-size: 10px;
+        }
+        footer > div.lowerfooter > div:nth-child(2) > span {
+          width: 100%;
+        }
+      }
+
+      @media (max-width: 400px) {
+        footer {
+          display: flex;
+          flex-direction: column-reverse;
+        }
+        footer > div.upperfooter > div:nth-child(2) {
+          display: grid;
+          grid-template-rows: 20% 20% 20% 20%;
+          justify-content: space-around;
+          font-size: small;
+        }
+        footer > div.upperfooter > div:nth-child(2) > div {
+          display: grid;
+          grid-template-rows: repeat(4, 1fr);
+        }
+        footer > div.upperfooter > div:nth-child(2) > div > li:nth-child(1) {
+          display: block;
+        }
+        footer > div.upperfooter > div:nth-child(2) > div > li {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <footer>
+      <div class="upperfooter">
+        <div>
+          <div class="logo">
+            <img
+            src=https://th.bing.com/th/id/R.059b8c7e09cc0e508baad5196981ff0e?rik=TSCMyXqnX5P3Ww&riu=http%3a%2f%2f1.bp.blogspot.com%2f-ZAtg1X0c8Ko%2fTjKObOR0Y_I%2fAAAAAAAAAKU%2f0K2HFSkxSec%2fs1600%2fBJP_emblom.jpg&ehk=7lF17OuSzujyoWaciTf47QEkgJU7n5Hrw0qQAWSgkCs%3d&risl=&pid=ImgRaw&r=0alt=""
+            />
+            <div>LOGO</div>
+          </div>
+        </div>
+        <div>
+          <div>
+            <li>Shop</li>
+            <li>Gift cards</li>
+            <li>Etsy Registry</li>
+            <li>Sitemap</li>
+            <li>Etsy blog</li>
+            <li>Etsy United Kingdom</li>
+            <li>Etsy Germany</li>
+            <li>Etsy Canada</li>
+          </div>
+          <div>
+            <li>Sell</li>
+            <li>Sell on Etsy</li>
+            <li>Teams</li>
+            <li>Forums</li>
+            <li>Affiliates & Creators</li>
+          </div>
+          <div>
+            <li>About</li>
+            <li>Etsy, Inc.</li>
+            <li>Policies</li>
+            <li>Investors</li>
+            <li>Careers</li>
+            <li>Press</li>
+            <li>Impact</li>
+            <li>Legal imprint</li>
+          </div>
+          <div>
+            <li>Shop</li>
+            <li>Gift cards</li>
+            <li>Etsy Registry</li>
+            <li>Sitemap</li>
+            <li>Etsy blog</li>
+            <li>Etsy United Kingdom</li>
+            <li>Etsy Germany</li>
+            <li>Etsy Canada</li>
+          </div>
+        </div>
+      </div>
+      <div class="lowerfooter">
+        <div>
+          <div>
+            <img
+              src="https://th.bing.com/th/id/R.607b9f69862d76af04b474113c0c7ff5?rik=lfnOsbv7mhDNbQ&riu=http%3a%2f%2fupload.wikimedia.org%2fwikipedia%2fcommons%2fb%2fbc%2fFlag_of_India.png&ehk=Pk5lH0C%2fhstFahWfb15vLjtrJb3DslIU4%2fAQneo9IIM%3d&risl=&pid=ImgRaw&r=0"
+              alt=""
+            />
+          </div>
+          <div>India</div>
+          <div>English (IN)</div>
+          <div>₹ (INR)</div>
+        </div>
+        <div>
+          <span>c 2024 Etsy, Inc. </span>
+          <span>Terms of Use</span>
+          <span> Privacy</span>
+          <span>Interest-based ads </span>
+          <span>Local Shops</span>
+          <span>Regions</span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

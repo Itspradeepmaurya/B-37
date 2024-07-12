@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Figma L2 vitatours</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      .con2 {
+        max-width: 1320px;
+        margin: auto;
+        position: relative;
+      }
+
+      header > div {
+        width: 1920px;
+        height: 860px;
+        margin: auto;
+        z-index: -1;
+      }
+      header > div > img {
+        width: 100%;
+      }
+      header > section {
+      }
+      header > section > nav {
+        display: flex;
+        color: #05073c;
+      }
+      nav > div > img {
+        width: 167px;
+        height: 32px;
+        position: absolute;
+        left: 250px;
+        top: 20px;
+      }
+      nav > div:nth-of-type(2) {
+        width: 611.84px;
+        height: 44.13px;
+        position: absolute;
+        left: 497px;
+        top: 20px;
+      }
+      nav > div:nth-of-type(2) > span {
+        width: 104.45px;
+        height: 44.13px;
+        padding: 8px 19.8px 8px 20px;
+        border-radius: 100px 0px 0px 0px;
+      }
+      nav > div:nth-of-type(3) {
+        width: 367.92px;
+        height: 44px;
+        top: 20px;
+        left: 1200.08px;
+        position: absolute;
+      }
+      nav > div:nth-of-type(3) > span {
+        width: 91.86px;
+        height: 42.13px;
+        top: 0.94px;
+        left: 30px;
+        padding: 11px 19.8px 11.13px 20px;
+        border-radius: 200px 0px 0px 0px;
+      }
+      nav > div:nth-of-type(3) > button {
+        /* width: 83.31px; */
+        height: 40px;
+        left: 284.61px;
+        padding: 12px 20.8px 12px 21px;
+        border-radius: 200px;
+        border: 1px 0px 0px 0px;
+      }
+      header > section > div {
+        width: 880px;
+        height: 254px;
+        padding: 0px 15px 0px 15px;
+      }
+      header > section > div > p {
+        width: 664px;
+        height: 151px;
+        position: absolute;
+        top: 150px;
+        left: 608.09px;
+        font-family: Inter;
+        font-size: 60px;
+        font-weight: 600;
+        line-height: 72px;
+        text-align: center;
+        background: linear-gradient(to right, #ec8c61, #ff6b08, #5343be);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .poster {
+        width: 850px;
+        height: 80px;
+        position: absolute;
+        display: grid;
+        grid-template-columns: 80% 20%;
+        top: 300px;
+        left: 515px;
+        padding: 10px 0px 0px 0px;
+        border-radius: 200px;
+        background-color: white;
+      }
+      .poster > div {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .poster > div > div {
+        display: flex;
+        padding-top: 7px;
+        padding-bottom: 7px;
+      }
+      .poster > div > div > div:nth-of-type(2) {
+        padding-left: 10px;
+        padding-top: 3.2px;
+        padding-bottom: 3.2px;
+      }
+      .c1 {
+        width: 50px;
+        height: 50px;
+        padding: 15px 14.8px 15px 15px;
+        border-radius: 50px;
+        background-color: rgb(250, 241, 228);
+      }
+      .c2 {
+        width: 62px;
+        height: 60px;
+        position: absolute;
+        top: 10px;
+        left: 778px;
+        background-color: #ff6b08;
+        border-radius: 200px;
+      }
+      .popular {
+        width: 1320px;
+        height: 600px;
+        position: static;
+        top: 972px;
+        left: 300px;
+        margin-inline: 300px;
+      }
+      .popular > h1 {
+        width: 294.31px;
+        height: 45px;
+        position: relative;
+        top: 5px;
+        left: 15px;
+        font-family: Inter;
+        font-size: 29.88px;
+        font-weight: 700;
+        line-height: 45px;
+        text-align: left;
+        color: #05073c;
+      }
+      .popular > h3 {
+        width: 44.79px;
+        height: 28.13px;
+        position: relative;
+        top: 0.88px;
+        left: 1234.41px;
+        font-family: Inter;
+        font-size: 14.3px;
+        font-weight: 400;
+        line-height: 28.13px;
+        text-align: left;
+        color: #05073c;
+      }
+      .popular > div > div:nth-of-type(1) {
+        width: 410px;
+        height: 510px;
+        position: relative;
+        top: 0px;
+        left: 15px;
+        border-radius: 12px;
+      }
+      .popular > div > div:nth-of-type(2) {
+        width: 300px;
+        height: 240px;
+        position: absolute;
+        top: 80px;
+        left: 755px;
+        border-radius: 12px;
+      }
+      .popular > div > div:nth-of-type(4) {
+        width: 520px;
+        height: 240px;
+        top: 80px;
+        left: 1085px;
+        position: absolute;
+        border-radius: 12px 0px 0px 0px;
+      }
+      .popular > div > div:nth-of-type(3) {
+        width: 300px;
+        height: 240px;
+        top: 340px;
+        left: 755px;
+        position: absolute;
+        border-radius: 12px;
+      }
+      .popular > div > div:nth-of-type(5) {
+        width: 190px;
+        height: 240px;
+        position: absolute;
+        top: 340px;
+        left: 1085px;
+        border-radius: 12px;
+      }
+      .popular > div > div:nth-of-type(6) {
+        width: 300px;
+        height: 240px;
+        top: 340px;
+        left: 1305px;
+        position: absolute;
+        border-radius: 12px 0px 0px 0px;
+      }
+      .why {
+        width: 1320px;
+        height: 296.38px;
+        position: relative;
+        top: 177px;
+        left: 300px;
+      }
+      .why > h1 {
+        width: 267.33px;
+        height: 45px;
+        left: 15px;
+        position: relative;
+        font-family: Inter;
+        font-size: 29.3px;
+        font-weight: 700;
+        line-height: 45px;
+        text-align: left;
+      }
+      .why > div {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 74px;
+        pad: 5px;
+      }
+      .why > div > div > div > img {
+        width: 55.03px;
+        height: 37.52px;
+        position: relative;
+        top: 13.48px;
+        left: 12.59px;
+      }
+      .why > div > div > h2 {
+        width: 153.14px;
+        height: 27px;
+        position: relative;
+        top: 25px;
+        left: 15px;
+        font-family: Inter;
+        font-size: 17.72px;
+        font-weight: 500;
+        line-height: 27px;
+        text-align: left;
+        color: #05073c;
+      }
+      .why > div > div > p {
+        width: 255.53px;
+        height: 76.25px;
+        top: 66px;
+        left: 15px;
+        position: relative;
+        font-family: Inter;
+        font-size: 14.88px;
+        font-weight: 400;
+        line-height: 28.13px;
+        text-align: left;
+        color: #05073c;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="con2">
+      <div>
+        <img
+          src="https://s3-alpha-sig.figma.com/img/e4e9/4bcd/6013879f33e24c0450bcde15d215f8ae?Expires=1721606400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=lKhVVF6ytGtLi1jmqbdSah7Ml3LEPG52QQqXy2UM376tnZNqHKsw9Nm9XNQNeiYmO7f4zSMvycZ6UDj6o2uAG3QPIYCpyJRw0C-AeDlh-jbYay5zySWTc02Pe9bp0CtShLgb2FbytpWWuyIpMh7E5g7vLwtSvaWhBr2K62FbeyNWL0OAZMICFNlRxClB4Wh0PaDJReDoow711JwkUCYurzyI4GrpNA2KsPcjtT3EOyETlcQnyNYN1n5A57gVuST1VXH19Fr4VgLN~y0BpYV-uJXLP-VBMnOomFPcB7iL7MmocU0GP6ofrNCN3GuAyYnrZ0XGMeEQ3ybefGGw2Tx56Q__"
+          alt="image"
+        />
+      </div>
+      <section>
+        <nav>
+          <div><img src="./logo-1.svg fill.png" alt="image" /></div>
+          <div>
+            <span>Home</span>
+            <span>Tour</span>
+            <span>Destination</span>
+            <span>Activities</span>
+            <span>Pages</span>
+            <span>Contact</span>
+          </div>
+          <div>
+            <span>USD</span>
+            <span>Help</span>
+            <button style="border: none; background-color: #fdf8f4">
+              Sign up
+            </button>
+            <button style="background-color: #fdf8f4">Log in</button>
+          </div>
+        </nav>
+        <div>
+          <p>Life Is Adventure Make The Best Of It</p>
+          <div class="poster">
+            <div>
+              <div style="padding-left: 20px">
+                <div class="c1"></div>
+                <div>
+                  <p>Where</p>
+                  <p>Search destinations</p>
+                </div>
+              </div>
+              <div>
+                <div class="c1"></div>
+                <div>
+                  <p>When</p>
+                  <p>February 05 ~ March 14</p>
+                </div>
+              </div>
+              <div>
+                <div class="c1"></div>
+                <div>
+                  <p>Tour Type</p>
+                  <p>All tour</p>
+                </div>
+              </div>
+            </div>
+            <div class="c2"></div>
+          </div>
+        </div>
+      </section>
+    </header>
+    <main class="con2">
+      <section class="popular">
+        <h1>Popular things to do</h1>
+        <h3>See all</h3>
+        <div>
+          <div><img src="./Link.png" alt="image" /></div>
+          <div><img src="./Link (1).png" alt="image" /></div>
+          <div><img src="./Link (2).png" alt="image" /></div>
+          <div><img src="./Link (3).png" alt="image" /></div>
+          <div><img src="./Link (4).png" alt="image" /></div>
+          <div><img src="./Link (5).png" alt="image" /></div>
+        </div>
+      </section>
+      <section class="why">
+        <h1>Why choose Tourz</h1>
+        <div>
+          <div>
+            <div><img src="./ticket.svg fill.png" alt="image" /></div>
+            <h2>Ultimate flexibility</h2>
+            <p>
+              You're in control, with free cancellation and payment options to
+              satisfy any plan or budget.
+            </p>
+          </div>
+          <div>
+            <div><img src="./hot-air-balloon.svg fill.png" alt="image" /></div>
+            <h2>Memorable experiences</h2>
+            <p>
+              Browse and book tours and activities so incredible, you'll want to
+              tell your friends.
+            </p>
+          </div>
+          <div>
+            <div><img src="./diamond.svg fill.png" alt="image" /></div>
+            <h2>Quality at our core</h2>
+            <p>High-quality standards. Millions of reviews. A tourz company.</p>
+          </div>
+          <div>
+            <div><img src="./medal.svg fill.png" alt="image" /></div>
+            <h2>Award-winning support</h2>
+            <p>New price? New plan? No problem. We're here to help, 24/7.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

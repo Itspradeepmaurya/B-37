@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        height: 0;
+        box-sizing: border-box;
+      }
+      body {
+        width: 100vw;
+        height: 100vh;
+        background-color: black;
+      }
+      @keyframes bigger {
+        100% {
+          transition: transform;
+          transform: scale(3);
+          box-shadow: 15px 15px 15px 15px rgb(215, 29, 197);
+        }
+      }
+      #box {
+        height: 200px;
+        width: 400px;
+        background-color: black;
+        position: relative;
+        top: 300px;
+        left: 500px;
+        box-shadow: 5px 5px 5px 5px orange;
+        animation: bigger 2s ease-in-out infinite;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="box"></div>
+  </body>
+</html>
