@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>tailwind Sugar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+              p1: "#f72475",
+            },
+          },
+        },
+      };
+    </script>
+    <script
+      src="https://kit.fontawesome.com/91a6d2fe0f.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      .container {
+        max-width: 1600px;
+        margin: auto;
+      }
+      .uppernav,
+      .middlenav,
+      .lowernav,
+      #home,
+      #product {
+        max-width: 1600px;
+        margin: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <h1 class="text-3xl font-bold underline **text-clifford**">
+    Hello world!
+  </h1> -->
+    <header>
+      <nav
+        class="uppernav flex text-white"
+        style="
+          background: linear-gradient(to right, #f72475 0%, #000000fe 100%);
+        "
+      >
+        <div>
+          <p>B'day Special: Free Glitter Sling Bag on orders Rs. 999 & above</p>
+          <p>B'day Exclusive Makeup Kit | 6 bestsellers @ 1699</p>
+        </div>
+        <div class="flex ms-80">
+          <div class="ms-10">
+            <span><i class="fa-solid fa-mobile"></i></span>
+            <span>GET APP</span>
+          </div>
+          <div class="ms-10">
+            <span><i class="fa-solid fa-location-dot"></i></span>
+            <span>STORE</span>
+          </div>
+          <div class="ms-10">
+            <span><i class="fa-solid fa-gift"></i></span>
+            <span>GIFT CARD</span>
+          </div>
+          <div class="ms-10">
+            <span><i class="fa-regular fa-circle-question"></i></span>
+            <span>HELP</span>
+          </div>
+        </div>
+      </nav>
+      <nav>
+        <div class="middlenav bg-black text-white flex h-16">
+          <div>
+            <img src="./sugar.logo.png" alt="image" class="h-16 px-10" />
+          </div>
+          <div class="w-1/2 p-4">
+            <input
+              type="text"
+              placeholder="Try Liquid Lipstick"
+              class="w-2/3 p-2 bg-slate-900 rounded-l-lg"
+            /><button class="px-10 py-2 bg-white text-black rounded-r-lg">
+              <i class="fa-solid fa-search"></i>Search
+            </button>
+          </div>
+          <div class="p-4 f-20 text-lg">
+            <i class="fa-solid fa-user"></i>Login/Register
+          </div>
+          <div class="p-4 f-20 text-lg flex mx-10 gap-x-8">
+            <span><i class="fa-solid fa-heart"></i></span>
+            <span><i class="fa-solid fa-bag-shopping"></i></span>
+            <span><i class="fa-solid fa-question"></i></span>
+          </div>
+        </div>
+      </nav>
+      <nav class="lowernav">
+        <div class="bg-slate-900 text-white h-12 p-2 flex gap-x-12 text-sm">
+          <a href="#" class="hover:underline decoration-2 decoration-pink-600"
+            >SUGAR PLAY</a
+          >
+          <a href="#" class="hover:underline decoration-2 decoration-pink-600"
+            >LIPS</a
+          >
+          <a href="#" class="hover:underline decoration-2 decoration-pink-600"
+            >EYES</a
+          >
+          <a href="#" class="hover:underline decoration-2 decoration-pink-600"
+            >FACE</a
+          >
+          <a href="#" class="hover:underline decoration-2 decoration-pink-600"
+            >NAILS</a
+          >
+          <a href="#" class="hover:underline decoration-2 decoration-pink-600"
+            >SKINCARE</a
+          >
+          <a href="#" class="hover:underline decoration-2 decoration-pink-600"
+            >ACCESSORIES</a
+          >
+          <a href="#" class="hover:underline decoration-2 decoration-pink-600"
+            >GIFTING</a
+          >
+          <a href="#" class="hover:underline decoration-2 decoration-pink-600"
+            >BESTSELLERS</a
+          >
+          <a href="#" class="hover:underline decoration-2 decoration-pink-600"
+            >NEW LAUNCHES</a
+          >
+          <a href="#" class="hover:underline decoration-2 decoration-pink-600"
+            >OFFERS</a
+          >
+          <a href="#" class="hover:underline decoration-2 decoration-pink-600"
+            >BLOG</a
+          >
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section
+        id="home"
+        class="bg-slate-200 text-black my-4 rounded-l-lg h-12 py-2 px-10"
+      >
+        Home > <span> Kohl Of Honour Intense Kajal </span>
+      </section>
+      <section id="product" class="grid grid-cols-[600px_minmax(600px,_1fr)_100px] w-[1300px] border-2 border-black rounded-lg p-8 shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)] border-none mt-16shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)]">
+        <div id="leftproductimage" class="flex sticky top-0  h-[550px]">
+          <div class="smallimage grid w-1/6 h-1/6">
+            <div class="w-4/5 py-2 border my-2 rounded-md border-black	">
+              <img
+                src="https://cdn.shopify.com/s/files/1/0906/2558/files/Kohl-Of-Honour-Intense-Kajal-01-Black-Out-Black.jpg?v=1719855885"
+                alt="image"
+                class="w-full rounded-md"
+              />
+            </div>
+            <div class="w-4/5 border my-2 rounded-md">
+              <img
+                src="https://cdn.shopify.com/s/files/1/0906/2558/files/Kohl-Of-Honour-Intense-Kajal-01-Black-Out-Black-2.jpg?v=1719855889"
+                alt="image"
+                class="w-full rounded-md"
+              />
+            </div>
+            <div class="w-4/5 py-2 border my-2 rounded-md">
+              <img
+                src="https://cdn.shopify.com/s/files/1/0906/2558/files/Kohl-Of-Honour-Intense-Kajal-01-Black-Out-Black-3.jpg?v=1719855893"
+                alt="image"
+                class="w-full rounded-md"
+              />
+            </div>
+            <div class="w-4/5 py-2 border my-2 rounded-md">
+              <img
+                src="https://cdn.shopify.com/s/files/1/0906/2558/files/Kohl-Of-Honour-Intense-Kajal-01-Black-Out-Black-4.jpg?v=1719855897"
+                alt="image"
+                class="w-full rounded-md"
+              />
+            </div>
+          </div>
+          <div class="largeimage w-80% py-2 border my-2 rounded-md h-fit">
+            <img
+              src="https://cdn.shopify.com/s/files/1/0906/2558/files/Kohl-Of-Honour-Intense-Kajal-01-Black-Out-Black.jpg?v=1719855885image"
+              alt="image" class="w-full rounded-md"
+            />
+          </div>
+        </div>
+        <div id="rightproductdetail" class="w-full">
+
+            <div class=" mx-auto bg-white p-4 rounded-lg shadow-md w-full">
+                <div class="flex">
+                    <div class="grid justify-between items-center mb-4">
+                        <h1 class="text-xl font-semibold">Kohl Of Honour Intense Kajal - 01 Black Out (Black)</h1>
+                        <div class="text-black-500 flex items-center border w-1/4 px-2 rounded-md">
+                            <span class="text-lg font-semibold">4.6</span>
+                            <span class="ml-1">(628)</span>
+                        </div>
+                    </div>
+                    <div><button class="text-black text-sm">Share</button></div>
+                </div>
+                
+        
+                <div class="text-2xl font-bold mb-2">₹249.00</div>
+                <div class="border rounded-lg grid w-2/3">
+                    <div class="flex bg-black rounded-t-md">
+                         <div class="pt-4 px-2 font-bold"><span class="text-white">PRICE</span><span class="text-white" >₹199</span><span class="text-pink-500">(SAVE 20%)</span><span class="text-white">+FREE Shipping</span></div>
+                        <button class="bg-white border py-2 rounded mb-4  text-black font-bold w-1/4 mt-2">JOIN NOW</button>
+                    </div>
+                    
+                    <div class="flex justify-between items-center mb-4 mt-2">
+                        <div class="text-sm font-bold pl-4">BENEFITS UNLOCKED</div>
+                        <div class="text-sm text-slate-600">SAVE 20% EXTRA</div>
+                        <div class="text-sm text-slate-600">FREE  Delivery</div>
+                        <div class="text-sm text-slate-600">For Online & Offline</div>
+                    </div>
+                </div>
+                
+        
+                <div class="grid grid-cols-6 gap-2 my-4">
+                    <div class="border w-1/2 rounded-md p-1 box-border ">
+                        <div class="w-8 h-8 bg-black rounded-md "></div>
+                    </div>
+                    <div class="w-8 h-8 bg-green-800 rounded-md"></div>
+                    <div class="w-8 h-8 bg-purple-800 rounded-md"></div>
+                    <div class="w-8 h-8 bg-teal-700 rounded-md"></div>
+                    <div class="w-8 h-8 bg-blue-900 rounded-md"></div>
+                    <div class="w-8 h-8 bg-teal-600 rounded-md"></div>
+                </div>
+        
+                <div class="bg-gray-200 p-4 rounded mb-4 grid">
+                    <div class="mb-2 text-black font-bold">AVAILABLE OFFERS!</div>
+                    <div class="text-sm mb-1">Free Fanny Pack On Orders Above Rs.999</div> <a href="#" class="text-black-600 font-bold underline decoration-2">Know More</a>
+                    <div class="text-sm">Glitter Sling Bag Complimentary On Orders Above Rs.999 </div><a href="#" class="text-black-600 font-bold underline decoration-2">Know More</a>
+                    <div class="text-sm text-pink-500 mt-2 font-bold"><a href="#">+ View More</a></div>
+                </div>
+                <div class="flex">
+                    <div class=" font-bold py-2 px-4 border-4 border-black rounded-lg  mb-4 mr-2 "> <i class="fa-regular fa-heart"></i></div>
+                    <button class="bg-black text-white py-2 px-4 rounded w-1/4 mb-4">ADD TO BAG</button>
+                </div>
+                
+        
+                <div class="flex items-center mb-4 w-2/3">
+                    <input type="text" placeholder="Enter Delivery Pincode" class="border p-2 rounded-md w-full mr-2">
+                    <button class="bg-black text-white py-2 px-4 rounded-md">CHECK</button>
+                </div>
+        
+                <div class="flex justify-between items-center text-gray-500 mb-4">
+                    <div class="flex items-center space-x-2 bg-slate-200 h-12 w-full border-dashed border-y-2 border-4 py-2 border-box">
+                        <div class="text-sm">Cruelty Free</div>
+                        <div class="text-sm">Easy Return</div>
+                        <div class="text-sm">Quality First</div>
+                    </div>
+                    
+                </div>
+        
+                <div class="text-gray-700 font-bold">
+                    <div class="border-y-2 py-2 border-dashed ">DESCRIPTION</div>
+                    <div class="border-t-2 py-2 border-dashed">INGREDIENTS</div>
+                    <div class="border-t-2 py-2 border-dashed">FAQS</div>
+                    <div class="border-t-2 py-2 border-dashed">ADDITIONAL DETAILS</div>
+                    <div class="border-y-2 py-2 border-dashed">REVIEWS (628)</div>
+                </div>
+            </div></div>
+      </section>
+      <section id="fre">
+        <div class="max-w-7xl mx-auto py-8">
+            <h2 class="text-xl font-semibold text-center mb-6">FREQUENTLY BOUGHT TOGETHER</h2>
+            
+            <div class="flex space-x-4 overflow-x-auto">
+                <!-- Product 1 -->
+                <div class="bg-white p-4 rounded-lg shadow-md w-80 flex-none">
+                    <div class="relative">
+                        <img src="https://cdn.shopify.com/s/files/1/0906/2558/files/Smudge-Me-Not-Mini-Liquid-Lipstick-Set-of-4-Power-Up-Your-Pout.jpg?v=1719879619" alt="Product Image" class="rounded mb-4 ">
+                        <span class="absolute top-2 left-2 bg-blue-500 text-white text-xs px-2 py-1 rounded">Bestseller</span>
+                        <span class="absolute top-2 right-2 bg-green-500 text-white text-xs px-2 py-1 rounded">New</span>
+                    </div>
+                    <div class="text-center mb-4">Smudge Me Not Mini Liquid Lipstick Set of 4 - Power Up Your Pout</div>
+                    <div class="text-center text-2xl font-bold text-gray-900 mb-2">₹799 <span class="text-sm text-gray-500 line-through">₹999</span></div>
+                    <div class="text-center text-sm text-yellow-500 mb-4"><span class="font-bold">4.7</span> (3)</div>
+                    <button class="bg-black text-white py-2 px-4 rounded w-full">CHOOSE ITEMS</button>
+                </div>
+    
+                <!-- Product 2 -->
+                <div class="bg-white p-4 rounded-lg shadow-md w-80 flex-none">
+                    <div class="relative">
+                        <img src="https://cdn.shopify.com/s/files/1/0906/2558/files/Matte-Attack-Transferproof-Lipstick.jpg?v=1719855043" alt="Product Image" class="rounded mb-4 h-[415px]">
+                        <span class="absolute top-2 left-2 bg-blue-500 text-white text-xs px-2 py-1 rounded">Bestseller</span>
+                    </div>
+                    <div class="text-center mb-4">Matte Attack Transferproof Lipstick</div>
+                    <div class="text-center text-2xl font-bold text-gray-900 mb-2">₹749 <span class="text-sm text-gray-500 line-through">₹599</span></div>
+                    <div class="text-center text-sm text-yellow-500 mb-4"><span class="font-bold">4.8</span> (567)</div>
+                    <button class="bg-black text-white py-2 px-4 rounded w-full">SELECT SHADE</button>
+                </div>
+    
+                <!-- Product 3 -->
+                <div class="bg-white p-4 rounded-lg shadow-md w-80 flex-none">
+                    <div class="relative">
+                        <img src="https://cdn.shopify.com/s/files/1/0906/2558/files/Ace-Of-Face-Foundation-Stick.jpg?v=1719836444" alt="Product Image" class="rounded mb-4 h-[415px]">
+                        <span class="absolute top-2 left-2 bg-blue-500 text-white text-xs px-2 py-1 rounded">Bestseller</span>
+                    </div>
+                    <div class="text-center mb-4">Ace Of Face Foundation Stick</div>
+                    <div class="text-center text-2xl font-bold text-gray-900 mb-2">₹1149 <span class="text-sm text-gray-500 line-through">₹719</span></div>
+                    <div class="text-center text-sm text-yellow-500 mb-4"><span class="font-bold">4.6</span> (917)</div>
+                    <button class="bg-black text-white py-2 px-4 rounded w-full">SELECT SHADE</button>
+                </div>
+    
+                <!-- Product 4 -->
+                <div class="bg-white p-4 rounded-lg shadow-md w-80 flex-none">
+                    <div class="relative">
+                        <img src="https://cdn.shopify.com/s/files/1/0906/2558/files/Matte-As-Hell-Crayon-Lipstick-Minis-Set-of-3.jpg?v=1719867590" alt="Product Image" class="rounded mb-4">
+                        <span class="absolute top-2 left-2 bg-blue-500 text-white text-xs px-2 py-1 rounded">Bestseller</span>
+                    </div>
+                    <div class="text-center mb-4">Matte As Hell Crayon Lipstick Minis Set of 3</div>
+                    <div class="text-center text-2xl font-bold text-gray-900 mb-2">₹999 <span class="text-sm text-gray-500 line-through">₹1299</span></div>
+                    <div class="text-center text-sm text-yellow-500 mb-4"><span class="font-bold">4.8</span> (5)</div>
+                    <button class="bg-black text-white py-2 px-4 rounded w-full">CHOOSE ITEMS</button>
+                </div>
+            </div>
+    
+            <div class="text-center mt-8">
+                <h3 class="text-lg font-semibold mb-4">LET'S STAY IN TOUCH</h3>
+                <p class="text-gray-600 mb-4">Get the latest beauty tips straight to your inbox. Can't wait to connect!</p>
+                <div class="flex justify-center  ">
+                    <input type="email" placeholder="Enter Email" class="border p-2 rounded-l w-[700px]">
+                    <button class="bg-black text-white py-2 px-4 rounded-r">SUBSCRIBE</button>
+                </div>
+            </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
