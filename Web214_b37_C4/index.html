@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web214_b37_C2</title>
+    <script
+      src="https://kit.fontawesome.com/91a6d2fe0f.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      .container {
+        max-width: 1300px;
+        margin: auto;
+      }
+      .uppernav {
+        display: flex;
+        justify-content: space-between;
+        padding: 15px;
+        font-size: 20px;
+      }
+      .uppernav > h1 {
+        font-weight: 800;
+      }
+      .uppernav > div:nth-of-type(2) {
+        border: 1px solid grey;
+        padding: 15px;
+        border-radius: 10px;
+      }
+      .uppernav > div:nth-of-type(2):hover {
+        background-color: antiquewhite;
+      }
+      .lowernnav {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 60px;
+        padding: 15px;
+        font-size: 16px;
+      }
+      footer {
+        background-color: black;
+        color: rgb(201, 201, 201);
+        font-size: 14px;
+        height: 350px;
+        padding: 50px;
+      }
+      .upperfoot {
+        display: flex;
+      }
+      .upperleftfoot {
+        display: flex;
+        padding: 10px;
+        justify-content: space-between;
+        width: 100%;
+      }
+      .upperleftfoot > div > p {
+        padding: 5px;
+      }
+      .upperleftfoot > div > p:nth-of-type(1) {
+        font-weight: 600;
+        color: white;
+        font-size: 17px;
+      }
+      hr {
+        color: grey;
+      }
+      .upperrightfoot {
+        display: flex;
+        flex-direction: column;
+        place-content: center;
+        gap: 15px;
+        width: 100%;
+        position: relative;
+        left: 400px;
+      }
+      .upperrightfoot > div:nth-of-type(1) {
+        display: flex;
+        gap: 30px;
+      }
+      .upperrightfoot > p {
+        padding-left: 70px;
+      }
+      .upperrightfoot > div:nth-of-type(2) > input {
+        padding: 10px;
+        position: relative;
+        left: -100px;
+        width: 300px;
+        border-radius: 10px;
+      }
+      .lowerfoot {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+      }
+      .unveil {
+        display: flex;
+        margin-top: 50px;
+      }
+      .unveil > div > p:nth-of-type(1) {
+        border: 1px solid aqua;
+        padding: 5px;
+        border-radius: 25px;
+        width: 100px;
+        margin-top: 30px;
+      }
+      .unveil > div > p:nth-of-type(2) {
+        margin-top: 300px;
+        padding: 20px 0px;
+      }
+      .unveil > div > p:nth-of-type(3) {
+        padding: 20px 0px;
+      }
+      section.unveil > h1 {
+        font-size: 30px;
+      }
+      .box {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin: 50px 0px 100px 0px;
+      }
+      .card {
+        display: grid;
+      }
+      .card > div {
+        width: 400px;
+        border-radius: 10px;
+      }
+      .editor > div.box,
+      .staff > div.box {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        margin: 50px 0px 100px 0px;
+      }
+      .editor > div.box > div.card > div,
+      .staff > div.box > div.card > div {
+        width: 300px;
+        border-radius: 10px;
+      }
+      .editor > div.box > div.card > p:nth-of-type(1),
+      .staff > div.box > div.card > p:nth-of-type(1) {
+        font-size: 19px;
+      }
+      .editor > div.box > div.card > p:nth-of-type(2),
+      .staff > div.box > div.card > p:nth-of-type(2) {
+        font-size: 12px;
+      }
+      .staff > p {
+        position: relative;
+        left: 1150px;
+      }
+      .subscribe {
+        display: flex;
+        width: 100%;
+        gap: 50px;
+        margin-bottom: 100px;
+      }
+      .left {
+        background-color: #c4e0fb;
+        padding: 20px;
+        width: 100%;
+        border-radius: 10px;
+      }
+      .left > p {
+        padding: 5px 0px;
+      }
+      .left > p:nth-of-type(2) {
+        font-size: 25px;
+        width: 400px;
+      }
+      .left > p:nth-of-type(3) {
+        width: 400px;
+      }
+      .left > div {
+        width: 500px;
+        padding-top: 150px;
+      }
+      .left > div > input {
+        padding: 5px;
+        color: black;
+        background-color: #c4e0fb;
+      }
+      .left > div > button {
+        padding: 5px;
+        color: white;
+        background-color: black;
+        margin-left: 15px;
+      }
+      .right {
+        background-color: #fbe9c5;
+        width: 100%;
+        border-radius: 10px;
+      }
+      .right > div > img {
+        width: 300px;
+        height: 300px;
+        position: relative;
+        left: 150px;
+        top: 65px;
+      }
+      .worlddetail {
+        display: flex;
+        margin-bottom: 100px;
+      }
+      .world > h1 {
+        font-size: 40px;
+        padding: 5px;
+      }
+      .worldleft > div {
+        width: 750px;
+      }
+      .worldleft > div > img {
+        width: 100%;
+        borradi10px
+      }
+      .worldleft > p {
+        font-size: 30px;
+        padding: 5px;
+      }
+      .worldleft > div {
+        display: flex;
+        padding: 10px;
+      }
+      .worldleft > div > p {
+        width: 550px;
+      }
+      .worldleft > div > div {
+        display: flex;
+      }
+      .worldleft > div > div > div {
+        width: 40px;
+      }
+
+      .worldleft > div > div > div > img {
+        width: 100%;
+        border-radius: 50%;
+      }
+      .worldright {
+       padding: 10px;
+      }
+
+      .worldright>div:nth-of-type(1) {
+       width: 500px;
+       height: 200px;
+      }
+      .worldright>div>img {
+       width: 100%;
+       border-radius: 10px;
+      }
+      .worldright>h2 {
+       position: relative;
+       top: 180px;
+      }
+      .worldright>div:nth-of-type(2) {
+       position: relative;
+       top: 180px;
+      }
+      .worldright>div:nth-of-type(3) {
+       position: relative;
+       top: 200px;
+      }
+      .worldright>div:nth-of-type(4) {
+       position: relative;
+       top: 220px;
+      }
+      .advance {
+        background: url(https://cdn.prod.website-files.com/667bd81876339d31af9381fa/667eb128538b017fc4bfc5d0_news-main-15.jpg);
+        height: 400px;
+        /* background-position: center; */
+        background-position: center;
+        background-size:cover;
+      }
+      .advance> div{
+        width: 300px;
+        height: 300px;
+        background-color: #fff;
+        position: relative;
+        top: 50px;
+      }
+      .advance> div {
+        padding: 25px;
+      }
+      .advance> div > p:nth-of-type(1) {
+       font-size: 22px;
+       padding: 5px;
+      } 
+      .advance> div > p:nth-of-type(2) {
+       font-size: 15px;
+       padding: 5px;
+      }   
+      .advance> div > p:nth-of-type(3) {
+       font-size: 12px;
+       padding: 5px;
+      } 
+      
+      </style>
+  </head>
+  <body>
+    <header>
+      <nav class="">
+        <div class="uppernav container">
+          <div><i class="fa-solid fa-bars"></i></div>
+          <h1>JOURNAX</h1>
+          <div>Subsrcibe</div>
+        </div>
+        <hr />
+        <div class="lowernnav container">
+          <div>Health</div>
+          <div>Politics</div>
+          <div>Sports</div>
+          <div>World News</div>
+          <div>Business</div>
+          <div>Technology</div>
+          <div>Cart (0)</div>
+        </div>
+      </nav>
+      <hr />
+    </header>
+    <main class="container">
+      <section class="unveil">
+        <div>
+          <p>World News</p>
+          <h1 style="font-size: 30px; padding: 5px">
+            Unveiling the stories & significance of historic landmarks
+          </h1>
+          <p>
+            Discover the rich heritage, architectural marvels, and pivotal
+            events that have shaped these iconic sites. Through our in-depth
+            coverage, gain a deeper appreciation for the legacy.
+          </p>
+          <p>Marvin McKinney --- June 29, 2024</p>
+        </div>
+        <div>
+          <div>
+            <img
+              src="https://cdn.prod.website-files.com/667bd81876339d31af9381fa/667eb0b7962fe6b39d24c427_news-main-13.jpg"
+              alt=""
+            />
+          </div>
+        </div>
+      </section>
+      <section class="ride container">
+        <div class="box">
+          <div class="card">
+            <div>
+              <img
+                src="https://cdn.prod.website-files.com/667bd81876339d31af9381fa/667eb0e29ed33b549f7d769c_news-thumb-14-p-500.jpg"
+                alt=""
+                style="width: 100%; border-radius: 10px"
+              />
+            </div>
+            <h2>The rise of next-gen sports stars</h2>
+            <p>
+              From breakthrough performances to inspiring stories, we spotlight
+              the next generation of athletes making waves in the sports world.
+            </p>
+            <p>Leslie Alexander</p>
+          </div>
+          <div class="card">
+            <div>
+              <img
+                src="https://cdn.prod.website-files.com/667bd81876339d31af9381fa/667eb1252d8c203c005b88fe_news-thumb-15-p-500.jpg"
+                alt=""
+                style="width: 100%; border-radius: 10px"
+              />
+            </div>
+            <h2>Advancements in electric vehicle technology</h2>
+            <p>
+              Explore the latest innovations shaping the future of electric
+              vehicles. From cutting-edge battery technologies to advancements
+              in autonomous driving.
+            </p>
+            <p>Wade Warren</p>
+          </div>
+          <div class="card">
+            <div>
+              <img
+                src="https://cdn.prod.website-files.com/667bd81876339d31af9381fa/667eb15df0b53dd34be6a682_news-thumb-16-p-500.jpg"
+                alt=""
+                style="width: 100%; border-radius: 10px"
+              />
+            </div>
+            <h2>Tech giant acquires Al startup for $2 billion</h2>
+            <p>
+              Acquired an Al startup for $2 billion, aiming to enhance its
+              technological capabilities and expand its influence in the
+              artificial intelligence sector.
+            </p>
+            <p>Theresa Webb</p>
+          </div>
+        </div>
+      </section>
+      <hr />
+      <section class="editor container">
+        <h1>Editor's Choice</h1>
+        <div class="box">
+          <div class="card">
+            <div>
+              <img
+                src="https://cdn.prod.website-files.com/667bd81876339d31af9381fa/667fa6660746e795774eb436_editor-news-01.jpg"
+                alt=""
+                style="width: 100%; border-radius: 10px"
+              />
+            </div>
+            <p>International community expresses hope for resolution</p>
+            <p>World News</p>
+          </div>
+          <div class="card">
+            <div>
+              <img
+                src="https://cdn.prod.website-files.com/667bd81876339d31af9381fa/667fa71e7dde9e3d024847d7_editor-news-02.jpg"
+                alt=""
+                style="width: 100%; border-radius: 10px"
+              />
+            </div>
+            <p>Season's most dramatic races</p>
+            <p>Sports</p>
+          </div>
+          <div class="card">
+            <div>
+              <img
+                src="https://cdn.prod.website-files.com/667bd81876339d31af9381fa/667fa762dba43638cc6ed29d_editor-news-03.jpg"
+                alt=""
+                style="width: 100%; border-radius: 10px"
+              />
+            </div>
+            <p>Innovations driving the future of transportation</p>
+            <p>Technology</p>
+          </div>
+          <div class="card">
+            <div>
+              <img
+                src="https://cdn.prod.website-files.com/667bd81876339d31af9381fa/667fa7b9c213d85ea6857b50_editor-news-04.jpg"
+                alt=""
+                style="width: 100%; border-radius: 10px"
+              />
+            </div>
+            <p>
+              Supply chain disruptions challenges and solutions for businesses
+              worldwide
+            </p>
+            <p>Business</p>
+          </div>
+        </div>
+      </section>
+      <hr />
+    </main>
+
+    <section class="advance">
+      <div class="container">
+        <p>Advancements in electric vehicle technology</p>
+        <p>
+          Explore the latest innovations shaping the future of electric
+          vehicles. From cutting-edge battery technologies to advancements in
+          autonomous driving.
+        </p>
+        <p>June 29, 2024 - Wade Warren</p>
+      </div>
+    </section>
+
+    <main class="container">
+      <section class="world container">
+        <h1>World News</h1>
+        <div class="worlddetail">
+          <div class="worldleft">
+            <div>
+              <img
+                src="https://cdn.prod.website-files.com/667bd81876339d31af9381fa/667d352670fefb0f3ab47c18_news-main-02.jpg"
+                alt=""
+              />
+            </div>
+            <p>
+              UN report highlights growing threat of food insecurity in
+              developing nations
+            </p>
+            <div>
+              <p>
+                A recent United Nations report has brought attention to the
+                escalating issue of food insecurity in developing nations. The
+                report highlights how economic instability, climate change, and
+                ongoing conflicts are exacerbating hunger and malnutrition,
+                putting millions at risk.
+              </p>
+              <div>
+                <div>
+                  <img
+                    src="https://cdn.prod.website-files.com/667bd81876339d31af9381fa/667d058ec1e876bede9c10b2_author-main-04-p-500.jpg"
+                    alt=""
+                  />
+                </div>
+                <div>
+                  <p>Leslie Alexander</p>
+                  <p>Editorialist</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="worldright">
+            <div>
+              <img
+                src="https://cdn.prod.website-files.com/667bd81876339d31af9381fa/667eb3aba694ed3ca5f4b3d4_news-thumb-27-p-800.jpg"
+                alt=""
+              />
+            </div>
+            <h2>
+              Global leaders convene to discuss new trade agreements, aim to
+              strengthen economic cooperation
+            </h2>
+            <div>
+              <p>
+                By forging stronger economic ties, the participating nations
+                hope to stimulate trade, create jobs, and promote sustainable
+                development in an increasingly interconnected world.
+              </p>
+              <p>June 28, 2024 - Guy Hawkins</p>
+            </div>
+            <div>
+              <p>
+                Global leaders convene to discuss new trade agreements, aim to
+                strengthen economic cooperation
+              </p>
+              <p>June 28, 2024 - Guy Hawkins</p>
+            </div>
+            <div>
+              <p>Us presidential administration Biden's first year in office</p>
+              <p>June 27, 2024 - Kristin Watson</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr />
+      <section class="staff container">
+        <h1>Staff Writers</h1>
+        <p>
+          View All
+          <span style="border: 2px solid; border-radius: 50%; padding: 5px"
+            >&rightarrow;</span
+          >
+        </p>
+        <div class="box">
+          <div class="card">
+            <div>
+              <img
+                src="https://cdn.prod.website-files.com/667bd81876339d31af9381fa/667d0511259c918e72509691_author-main-01-p-500.jpg"
+                alt=""
+                style="width: 100%; border-radius: 10px"
+              />
+            </div>
+            <p>Theresa Webb</p>
+            <p>Senior Reporter</p>
+          </div>
+          <div class="card">
+            <div>
+              <img
+                src="https://cdn.prod.website-files.com/667bd81876339d31af9381fa/667d0539f5cd6d3a8e8f15a0_author-main-02-p-500.jpg"
+                alt=""
+                style="width: 100%; border-radius: 10px"
+              />
+            </div>
+            <p>Marvin McKinney</p>
+            <p>Publisher</p>
+          </div>
+          <div class="card">
+            <div>
+              <img
+                src="https://cdn.prod.website-files.com/667bd81876339d31af9381fa/667d056c783d376b3fe21bb7_author-main-03-p-500.jpg"
+                alt=""
+                style="width: 100%; border-radius: 10px"
+              />
+            </div>
+            <p>Wade Warren</p>
+            <p>Content Writer</p>
+          </div>
+          <div class="card">
+            <div>
+              <img
+                src="https://cdn.prod.website-files.com/667bd81876339d31af9381fa/667d058ec1e876bede9c10b2_author-main-04-p-500.jpg"
+                alt=""
+                style="width: 100%; border-radius: 10px"
+              />
+            </div>
+            <p>Leslie Alexander</p>
+            <p>Editorialist</p>
+          </div>
+        </div>
+      </section>
+      <section class="subscribe container">
+        <div class="left">
+          <p>Subscribe Our Newsletter</p>
+          <p>Empower yourself subscribe to our expert analysis and insights</p>
+          <p>
+            From breaking news to thought-provoking opinion pieces, our
+            newsletter keeps you informed.
+          </p>
+          <div>
+            <input
+              type="text"
+              name=""
+              id="enter"
+              placeholder="Enter your e-mail ..."
+            /><button type="button">Subscribe Now</button>
+          </div>
+        </div>
+        <div class="right">
+          <div>
+            <img
+              src="https://cdn.prod.website-files.com/660fedec1ab54b2595c51e30/667d0971bf5cc7d1c3d3ff9c_cta-mobile.png"
+              alt=""
+            />
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="upperfoot container">
+        <div class="upperleftfoot">
+          <div>
+            <p>Pages</p>
+            <p>About us</p>
+            <p>News</p>
+            <p>Authors</p>
+            <p>Newsletter Plans</p>
+            <p>Contact us</p>
+            <p>Sign Up</p>
+          </div>
+          <div>
+            <p>Category</p>
+            <p>Health</p>
+            <p>Politics</p>
+            <p>Sports</p>
+            <p>World News</p>
+            <p>Business</p>
+            <p>Technology</p>
+          </div>
+          <div>
+            <p>Resources</p>
+            <p>Privacy Policy</p>
+            <p>Advertise</p>
+            <p>Terms & Conditions</p>
+            <p>License</p>
+          </div>
+        </div>
+        <div class="upperrightfoot">
+          <div>
+            <span><i class="fa-solid fa-x"></i></span>
+            <span><i class="fa-brands fa-facebook"></i></span>
+            <span><i class="fa-brands fa-youtube"></i></span>
+            <span><i class="fa-brands fa-instagram"></i></span>
+            <span><i class="fa-solid fa-rss"></i></span>
+          </div>
+          <p>info@example.com</p>
+          <div>
+            <input
+              type="text"
+              name=""
+              id="address"
+              placeholder="Address with us              >"
+            />
+          </div>
+        </div>
+      </div>
+      <hr />
+      <div class="lowerfoot container">
+        <div>
+          <img
+            src="https://cdn.prod.website-files.com/660fedec1ab54b2595c51e30/667bf2ff264fc076bd9227c5_journax.svg"
+            alt=""
+          />
+        </div>
+        <div>
+          <span>2024 Journax. </span>
+          <span>Designed by Nixar. Powered by Webflow.</span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
