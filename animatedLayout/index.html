@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AnimatedLayout konstructor</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      .container {
+        max-width: 1300px;
+        margin: auto;
+      }
+      .container2 {
+        max-width: 1600px;
+        margin: auto;
+      }
+      header {
+        background-color: #16232b;
+        height: 1020px;
+      }
+      header > nav {
+        display: flex;
+        padding-top: 20px;
+        position: sticky;
+        top: 0px;
+        z-index: 2;
+      }
+
+
+      header > nav > div > img {
+        color: white;
+        background-color: #fff;
+      }
+      header > nav > div:nth-of-type(2) {
+        display: flex;
+        justify-content: center;
+        gap: 50px;
+        width: 900px;
+        color: white;
+      }
+      header > nav > div:nth-of-type(2) > a {
+        text-decoration: none;
+        color: white;
+      }
+      .primarybutton {
+        background-color: rgb(255, 94, 21);
+        color: white;
+        padding: 10px 30px;
+      }
+      #building {
+        color: white;
+        animation: b1 4s linear infinite;
+        animation-timeline: scroll();
+      }
+      @keyframes b1 {
+        0% {
+          transform: translateY(10px);
+        }
+        100% {
+          transform: translateY(-10px);
+        }
+      }
+      #building > p {
+        width: 800px;
+        display: flex;
+        justify-content: center;
+        font-size: 20px;
+        margin-left: 250px;
+        margin-top: 150px;
+      }
+      #building > h1 {
+        width: 800px;
+        display: flex;
+        justify-content: center;
+        font-size: 65px;
+        margin-left: 300px;
+        line-height: 80px;
+      }
+      #building > button {
+        width: 300px;
+        display: flex;
+        justify-content: center;
+        font-size: 30px;
+        margin-left: 500px;
+        margin-top: 20px;
+      }
+      .images > div {
+        height: 250px;
+        width: 400px;
+        position: absolute;
+      }
+      .images > div:nth-of-type(1) > img {
+        position: absolute;
+        top: -300px;
+        left: -60px;
+      }
+      .images > div:nth-of-type(2) > img {
+        position: absolute;
+        top: 00px;
+        left: 50px;
+        z-index: 1;
+      }
+      .images > div:nth-of-type(3) > img {
+        position: absolute;
+        top: 40px;
+        left: 200px;
+        z-index: 0;
+        height: 500px;
+        width: 1130px;
+      }
+      .images > div:nth-of-type(4) > img {
+        position: absolute;
+        top: -10px;
+        left: 1400px;
+        z-index: 1;
+      }
+      .images > div:nth-of-type(5) > img {
+        position: absolute;
+        top: -220px;
+        left: 1200px;
+      }
+      .images > div > img {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav class="container">
+        <div>
+          <img
+            src="https://cdn.prod.website-files.com/662263afef338aa3b80419f2/664c85f40fc7ae8b70447b49_Site%20Logo%20Black.svg"
+            alt="image"
+          />
+        </div>
+        <div>
+          <a href="#">Home v</a>
+          <a href="#">Pages v</a>
+          <a href="#"> Service v</a>
+          <a href="#">Blog v</a>
+          <a href="#">Contact v</a>
+        </div>
+        <div>
+          <button class="primarybutton">Get Started &rightarrow;</button>
+        </div>
+      </nav>
+      <section id="building" class="container">
+        <p>BUILDING & CONSTRUCTION TEMPLATE</p>
+        <h1>
+          Building And
+          <span style="color: rgb(252, 90, 32)">Construction </span>
+        </h1>
+        <h1>Webflow Template</h1>
+        <button class="primarybutton">Explore Now &rightarrow;</button>
+      </section>
+      <div class="images container2">
+        <div>
+          <img
+            src="https://cdn.prod.website-files.com/662263afef338aa3b80419f2/66693c06d2173d10aa675e23_Landing%20Hero%20Image.webp"
+            alt="image"
+          />
+        </div>
+        <div>
+          <img
+            src="https://cdn.prod.website-files.com/662263afef338aa3b80419f2/66693c00f44f54cadd136d43_Landing%20Hero%20Image%20(4).webp"
+            alt="image"
+          />
+        </div>
+        <div>
+          <img
+            src="https://cdn.prod.website-files.com/662263afef338aa3b80419f2/66693c04f44f54cadd136f02_Landing%20Hero%20Image%20(1)-p-2000.webp"
+            alt="image"
+          />
+        </div>
+        <div>
+          <img
+            src="https://cdn.prod.website-files.com/662263afef338aa3b80419f2/66693bfd41845fb583634335_Landing%20Hero%20Image%20(3).webp"
+            alt="image"
+          />
+        </div>
+        <div>
+          <img
+            src="https://cdn.prod.website-files.com/662263afef338aa3b80419f2/66693c039ab4af61d983de9d_Landing%20Hero%20Image%20(2).webp"
+            alt="image"
+          />
+        </div>
+      </div>
+    </header>
+    <main>
+      <section>gdfhgdfh</section>
+    </main>
+  </body>
+</html>
